@@ -2,11 +2,7 @@
   "$GMObject":"",
   "%Name":"oNote",
   "eventList":[
-<<<<<<< HEAD
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-=======
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
->>>>>>> 8415165e95052b738095e280c3ff2c12aa1ec308
   ],
   "managed":true,
   "name":"oNote",
