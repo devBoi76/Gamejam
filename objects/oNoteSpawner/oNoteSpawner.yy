@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oNote",
+  "%Name":"oNoteSpawner",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oNote",
+  "name":"oNoteSpawner",
   "overriddenProperties":[],
   "parent":{
     "name":"Pieciolinia",
@@ -25,16 +25,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"position","filters":[],"listItems":[],"multiselect":false,"name":"position","rangeEnabled":false,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sNuta",
-    "path":"sprites/sNuta/sNuta.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
