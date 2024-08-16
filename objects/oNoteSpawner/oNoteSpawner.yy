@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Pieciolinia",
-    "path":"folders/Objects/Pieciolinia.yy",
+    "path":"folders/XXX/Pieciolinia.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -17,8 +17,8 @@
   ],
   "name":"rFight",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"XXX",
+    "path":"folders/XXX.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
