@@ -2,7 +2,11 @@
   "$GMObject":"",
   "%Name":"oNote",
   "eventList":[
+<<<<<<< HEAD
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+=======
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+>>>>>>> 8415165e95052b738095e280c3ff2c12aa1ec308
   ],
   "managed":true,
   "name":"oNote",
@@ -25,13 +29,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"position","filters":[],"listItems":[],"multiselect":false,"name":"position","rangeEnabled":false,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"nuta",
-    "path":"sprites/nuta/nuta.yy",
+    "name":"sNuta",
+    "path":"sprites/sNuta/sNuta.yy",
   },
   "spriteMaskId":null,
   "visible":true,

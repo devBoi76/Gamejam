@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Notes",
-    "path":"folders/Notes.yy",
+    "name":"AAAAuto",
+    "path":"folders/AAAAuto.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
