@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.2.0.132",
   },
   "name":"GMTK Gamejam 2024",
   "resources":[
@@ -46,15 +46,19 @@
     {"id":{"name":"oObiektTestowy","path":"objects/oObiektTestowy/oObiektTestowy.yy",},},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"id":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
+    {"id":{"name":"Room_Test","path":"rooms/Room_Test/Room_Test.yy",},},
     {"id":{"name":"scrButtons","path":"scripts/scrButtons/scrButtons.yy",},},
     {"id":{"name":"scrWrite_text","path":"scripts/scrWrite_text/scrWrite_text.yy",},},
     {"id":{"name":"nuta","path":"sprites/nuta/nuta.yy",},},
+    {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"ts_tileset_hitboxes","path":"tilesets/ts_tileset_hitboxes/ts_tileset_hitboxes.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"roomId":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
+    {"roomId":{"name":"Room_Test","path":"rooms/Room_Test/Room_Test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
