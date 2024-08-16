@@ -1,4 +1,4 @@
-dialog = "Litwo! `NLOjczyzno moja! ty jes`NL`NL`NL`NL`NLtes jak `WSzdrowie`WE. Ile cie `FStrzeba`FE `SScenic, ten`SE tylko sie dowie, kto cie stracil. Dzis `WS`CXpieknosc`CR`WE twa w calej ozdobie widze i opisuje, bo `CXtesknie`CR po tobie.";
+dialog = "Litwooooooooooo! `NLOjczyzno moja! ty jes`NL`NL`NL`NL`NLtes jak `WSzdrowie`WE. Ile cie `FStrzeba`FE `SScenic, ten`SE tylko sie dowie, kto cie stracil. Dzis `WS`CXpieknosc`CR`WE twa w calej ozdobie widze i opisuje, bo `CXtesknie`CR po tobie.";
 
 kolor = $DEC6FF;
 
