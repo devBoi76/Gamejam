@@ -1,0 +1,1 @@
+//przyciski.step();

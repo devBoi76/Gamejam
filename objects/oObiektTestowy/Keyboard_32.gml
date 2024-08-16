@@ -1,0 +1,1 @@
+dialog1 = new_anim(dialog1);
