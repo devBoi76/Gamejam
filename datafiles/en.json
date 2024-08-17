@@ -1,6 +1,26 @@
-{	"lang": "English",
-	"buttons": {
-		"settings": "Settings",
-		"exit_game": "Exit"
-	}
+{
+    "lang": "English",
+    "buttons": {
+        "settings": "Settings",
+        "exit_game": "Exit"
+    },
+    "npc": [
+        {
+            "name": "Kajak Krzysztof",
+            "dialogs": [
+                "Jezdem Enpedzem!",
+                "Nie wiem, ale sie domyslam",
+                "xd Nie wiem"
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "Grzegorz Brzeczyszczykiewicz",
+            "dialogs": [
+                "Lubie pizze",
+                "Lubie rosol"
+            ],
+            "sprite": "spr_npc_test"
+        }
+    ]
 }

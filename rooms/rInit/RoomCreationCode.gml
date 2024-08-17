@@ -1,4 +1,4 @@
-room_goto_next();
+room_goto(room_start);
 
 if file_exists("en.json") {
 
@@ -11,3 +11,10 @@ file_text_close(file);
 
 global.lang = json_parse(json_string);
 }
+
+global.target =
+{
+	x : 330,
+	y : 450
+}
+randomize();

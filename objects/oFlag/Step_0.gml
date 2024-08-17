@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _collides = place_meeting(x, y, oTestowaPostac)
+var _collides = place_meeting(x, y, obj_player_test)
 
 var _t = get_timer()
 
