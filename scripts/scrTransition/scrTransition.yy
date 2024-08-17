@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"collision_y",
+  "%Name":"scrTransition",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"collision_y",
+  "name":"scrTransition",
   "parent":{
-    "name":"AAA",
-    "path":"folders/AAA.yy",
+    "name":"XXX",
+    "path":"folders/XXX.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
