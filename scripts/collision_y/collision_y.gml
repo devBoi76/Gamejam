@@ -27,7 +27,8 @@ function try_move_y(_y_speed , _player_width , _player_height )
 			{
 				
 				other.failing = !(bool ( _sign + 0.5 ));
-				other.coyote_jump = other.coyote_jump_length;
+				if(!other.failing){other.coyote_jump = other.coyote_jump_length;}
+				else{other.coyote_jump = clamp(other.coyote_jump - 1 , 0 , other.coyote_jump_length);}
 				
 				return( i - _sign );
 			}
