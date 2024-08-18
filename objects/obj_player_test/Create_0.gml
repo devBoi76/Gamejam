@@ -1,6 +1,11 @@
+
+
+
 x_speed = 0;
 acceleration = 1.5;
-slippery = 1.25; // The larger it is the less slippery floor is. Below 1 it accelerates player.
+slippery = 1.25;// The larger it is the less slippery floor is. Below 1 it accelerates player.
+current_slippery = slippery;
+air_slippery = 0.1; // The larger it is the more slippery air is. Shall not be larger than 1.
 max_x_speed = 15;
 
 hitbox_height = 120;
