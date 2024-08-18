@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "lang": "English",
     "buttons": {
@@ -23,4 +24,22 @@
             "sprite": "spr_npc_test"
         }
     ]
+=======
+{	"lang": "English",
+	"buttons": {
+		"settings": "Settings",
+		"exit_game": "Exit"
+	},
+	"inventory": [ 
+		{
+			"item1": "Przedmiot1",
+			"item2": "Przedmiot2",
+			"item3": "Przedmiot3"
+		},{
+			"item1": "opis przedmiotu pierwszego",
+			"item2": "opis przedmiotu drugiego",
+			"item3": "opis przedmiotu trzeciego"
+		}
+	]
+>>>>>>> eae93097b33ffd6b9a8ad5e5a746aada47036239
 }
