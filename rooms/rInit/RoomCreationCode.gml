@@ -18,6 +18,12 @@ global.target =
 	y : 450
 }
 
+global.last_player_pos =
+{
+	x: 0,
+	y: 0,
+}
+
 
 save_constructor = function() constructor
 {

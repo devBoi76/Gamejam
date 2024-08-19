@@ -107,16 +107,16 @@ var _clamp_right = false
 var _clamp_up = false
 var _clamp_down = false
 
-if (_new_cam_target_x < 0) {
+if (_new_cam_target_x < 0 + margin_left_px) {
 	_clamp_right = true	
 }
-if (_new_cam_target_x > room_width - _viewW) {
+if (_new_cam_target_x > room_width - _viewW - margin_right_px) {
 	_clamp_left = true	
 }
-if (_new_cam_target_y < 0) {
+if (_new_cam_target_y < 0 + margin_top_px) {
 	_clamp_up = true	
 }
-if (_new_cam_target_y > room_height - _viewH) {
+if (_new_cam_target_y > room_height - _viewH - margin_bottom_px) {
 	_clamp_down = true	
 }
 

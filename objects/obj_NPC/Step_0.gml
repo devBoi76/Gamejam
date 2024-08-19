@@ -19,6 +19,7 @@ and not block_manual_start) and
 }
 
 if (start_force_talking) {
+	show_debug_message("START_FORCE_TALKING!!!")
 	my_textbox.next_dialog()
 	start_force_talking = false
 	ignore_distance = true

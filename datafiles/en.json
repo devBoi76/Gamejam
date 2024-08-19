@@ -33,7 +33,9 @@
 		"`CS6wysyłam cie do pokoju startowego",
 		"`Xroom_start"
             ],
-            "sprite": "spr_npc_test"
+            "sprite": "spr_npc_test",
+            "goto_x": 330,
+            "goto_y": 450,
         },
         {
           "name": "Blob end fight",
@@ -51,7 +53,9 @@
             "`XrFight",
           ],
           "sprite": "spr_sluzek_overworld",
-          "sprite_scale": 0.1
+          "sprite_scale": 0.1,
+          "goto_x": 0,
+          "goto_y": 0,
         }
     ]
 }

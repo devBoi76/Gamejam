@@ -34,6 +34,11 @@ function play_note(note) {
 
 if not fight_has_started {
 	return
+} else if start_time == 0 {
+	start_time = get_timer()
+	end_time = start_time + (
+		max(audio_sound_length(enemy_music), audio_sound_length(hero_music))
+		) * 1_000_000	
 }
 
 var _t = get_timer()
@@ -45,9 +50,25 @@ if (not audio_started and _t >= start_time + note_sec_in_advance * 1_000_000) {
 	audio_started = true
 }
 
-if (_t > end_time) {
+if (_t > end_time and not enemy_obj.fight_over) {
 	enemy_obj.fight_over = true
-	enemy_obj.won_fight = player_confidence < -40
+	var _enemy_won_fight =  player_confidence < -40
+	enemy_obj.won_fight =_enemy_won_fight 
+	if (_enemy_won_fight) {
+		show_debug_message(instance_create_layer(gui_win_loose_x, gui_win_loose_y, "Przeciwnik", oIntroText, 
+		{
+			text_sprite: spr_you_lost
+		}))
+		show_debug_message("ENEMY WON")
+	} else {
+		instance_create_layer(gui_win_loose_x, gui_win_loose_y, "Przeciwnik", oIntroText, 
+		{
+			text_sprite: spr_you_win
+		})
+		show_debug_message("HERO WON")
+	}
+	oIntroText.start_anim = true
+	alarm[1] = 120
 }
 
 for (var i = last_played_idx; i < array_length(notes); i += 1) {

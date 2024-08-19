@@ -62,9 +62,12 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 				current_text = -1;
 			} else if (dialog_array[current_text + 1] == "`FIGHT_NEXT_STAGE") {
 				oNoteSpawner.fight_has_started = true
-				current_text = -1;
 				is_over = true;
 	
+				if (instance_exists(oIntroText)) {
+					oIntroText.start_anim = true
+				}
+				current_text = - 1	
 			}
 			else
 			{
@@ -104,7 +107,7 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 	
 }
 
-function start_fight( _player_id , _fight_room)
+function start_fight( _player_id , _fight_room , last_pos = true)
 {
 	if("obj_player_test" = object_get_name(_player_id.object_index))
 	{
@@ -116,6 +119,11 @@ function start_fight( _player_id , _fight_room)
 	//_fading_id.is_fading = true;
 	//global.target.x = 330;
 	//global.target.y = 450;
+	if(last_pos) {
+		global.last_player_pos.x = obj_player_test.x
+		global.last_player_pos.y = obj_player_test.y
+	}
 	
-	room_fade( 330 , 450 , _fight_room);
+	
+	room_fade(global.lang.npc[npc_id].goto_x, global.lang.npc[npc_id].goto_y, _fight_room);
 }
