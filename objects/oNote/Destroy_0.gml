@@ -7,6 +7,7 @@ if not did_thing {
 			break
 		case NoteType.PLAYER:
 			oNoteSpawner.player_confidence += POINTS_PL_MISS_NOPRESS
+			oNoteSpawner.last_player_note_missed = true
 			break
 	}
 }

@@ -1,4 +1,4 @@
-room_goto(rFight);
+room_goto(rFightBlob);
 
 if file_exists("en.json") {
 

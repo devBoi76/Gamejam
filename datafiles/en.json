@@ -67,14 +67,38 @@
             "dialogs": [
                 [
                     "A kogo my tu mamy",
-                    "`XrFight"
+                    "`XrFightBlob"
                 ]
             ],
             "sprite": "spr_sluzek_overworld",
             "sprite_scale": 0.1,
             "goto_x": 0,
             "goto_y": 0
-        }
+        },
+        {
+            "name": "Blob",
+            "dialogs": [
+                [
+                    "A kogo my tu mamy",
+                    "`XrFightPipe"
+                ]
+            ],
+            "sprite": "spr_sluzek_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "Blob end fight",
+            "dialogs": [
+                [
+                    "Przygotuj się!",
+                    "Zaraz cię zblobuję!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
     ],
     "teleports": [
         {
@@ -86,7 +110,7 @@
         {
             "room": "room_third",
             "x": 0,
-            "y": 570,
+            "y": 450,
             "speed": 0
         },
         {
