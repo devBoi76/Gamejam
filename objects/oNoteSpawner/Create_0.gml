@@ -12,6 +12,8 @@ if (hero_music == noone) {
 	show_message("BRAK WYBRANEGO HERO MUSIC W oNoteSpawner!!!")	
 }
 
+show_debug_message("CREATE_NOTE_SPAWNER")
+
 var _csv = load_csv(csv_note_file)
 var _ds_w = ds_grid_width(_csv)
 var _ds_h = ds_grid_height(_csv)
@@ -37,6 +39,7 @@ var TRACK_W = (1 - player_pos_perc) * sprite_width
 NOTE_SPEED_PX_PER_SEC = 600
 note_sec_in_advance = TRACK_W / NOTE_SPEED_PX_PER_SEC
 
+fight_has_started = false
 audio_started = false
 start_time = get_timer()
 
@@ -46,7 +49,6 @@ max(audio_sound_length(enemy_music), audio_sound_length(hero_music)) + 2
 
 note_percs = [0.1121, 0.3076, 0.5, 0.6942, 0.8831]
 note_positions = [0, 0, 0, 0, 0]
-
 
 note_clicked_this_frame = false
 
@@ -60,3 +62,7 @@ for (var i = 0; i < 5; i += 1) {
 //}
 
 player_confidence = 0
+
+if (prefight_chat) {
+	alarm[0] = 20	
+}

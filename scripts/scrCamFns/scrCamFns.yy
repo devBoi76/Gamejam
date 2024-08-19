@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scrCamFns",
   "isCompatibility":false,
   "isDnD":false,

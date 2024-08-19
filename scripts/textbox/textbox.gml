@@ -10,11 +10,10 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 	animation_progress = 0;
 	appear = 0;
 	appearing_speed = 0.05;
-	is_ended = false;
 	is_shown = true;
 	name = global.lang.npc[npc_id].name;
 	margin = _margin;
-	
+	is_over = false
 	
 	dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs));
 	for( var _i = 0 ; _i < array_length(dialog_array) ; _i++ )
@@ -38,25 +37,35 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 		}
 	}
 	
-	//// switches to a next dialog
+	static start_dialog = function() {
+		is_over = false	
+	}
 	static next_dialog = function()
 	{
+		if (is_over) {
+			return
+		}
+		
 		if(animation_progress == -1 || current_text == -1)
 			{
-			if(current_text + 1 >= array_length(dialog_array))
+				
+
+			
+			if(current_text >= array_length(dialog_array) - 1)
 			{
-				is_ended = true;
+				is_over = true
 				current_text = -1;
 			}
 			else if( string_char_at( dialog_array[current_text + 1] , 1) == "`" && string_char_at( dialog_array[current_text + 1] , 2) == "X" )
 			{
-				is_ended = true;
 				start_fight( player_id , asset_get_index(string_delete(dialog_array[current_text + 1] , 1 , 2)));
 				current_text = -1;
+			} else if (dialog_array[current_text + 1] == "`FIGHT_NEXT_STAGE") {
+				oNoteSpawner.fight_has_started = true
+				current_text = - 1	
 			}
 			else
 			{
-				is_ended = false;
 				animation_progress = 0;
 				current_text++;
 			}			
@@ -79,11 +88,6 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 		{
 			appearing_speed = abs(appearing_speed) * -1;
 			appear = clamp( appear + appearing_speed , 0 , 1);
-			if(appear == 0)
-			{
-				current_text = -1;
-				is_ended = false;
-			}
 		}
 	}
 	
@@ -111,5 +115,5 @@ function start_fight( _player_id , _fight_room)
 	//global.target.x = 330;
 	//global.target.y = 450;
 	
-	room_fade( 330 , 450 , room_start);
+	room_fade( 330 , 450 , _fight_room);
 }

@@ -32,6 +32,10 @@ function play_note(note) {
 		
 }
 
+if not fight_has_started {
+	return
+}
+
 var _t = get_timer()
 note_clicked_this_frame = false
 
@@ -47,7 +51,7 @@ if (_t > end_time) {
 }
 
 for (var i = last_played_idx; i < array_length(notes); i += 1) {
-	if (_t >= (notes[i].start_sec) * 1_000_000 * 60 / 200) {
+	if (_t - start_time >= (notes[i].start_sec) * 1_000_000 * 60 / 200) {
 		play_note(notes[i])
 		last_played_idx = max(last_played_idx, i + 1)
 	}

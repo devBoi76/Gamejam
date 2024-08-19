@@ -34,6 +34,24 @@
 		"`Xroom_start"
             ],
             "sprite": "spr_npc_test"
+        },
+        {
+          "name": "Blob end fight",
+          "dialogs": [
+            "Przygotuj się!",
+            "Zaraz cię zblobuję!!",
+            "`FIGHT_NEXT_STAGE",
+          ],
+          "sprite": "spr_npc_test",
+        },
+        {
+          "name": "Blob",
+          "dialogs": [
+            "A kogo my tu mamy",
+            "`XrFight",
+          ],
+          "sprite": "spr_sluzek_overworld",
+          "sprite_scale": 0.1
         }
     ]
 }
