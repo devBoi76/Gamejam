@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrNoteTypes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrNoteTypes",
+  "parent":{
+    "name":"Pieciolinia",
+    "path":"folders/XXX/Pieciolinia.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

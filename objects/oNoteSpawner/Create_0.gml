@@ -1,0 +1,62 @@
+/// @description
+
+if (enemy_obj == noone) {
+	show_message("BRAK WYBRANEGO PRZECIWNIKA W oNoteSpawner!!!")
+}
+
+if (enemy_music == noone) {
+	show_message("BRAK WYBRANEGO ENEMY MUSIC W oNoteSpawner!!!")	
+}
+
+if (hero_music == noone) {
+	show_message("BRAK WYBRANEGO HERO MUSIC W oNoteSpawner!!!")	
+}
+
+var _csv = load_csv(csv_note_file)
+var _ds_w = ds_grid_width(_csv)
+var _ds_h = ds_grid_height(_csv)
+
+notes = array_create(_ds_h - 1, {})
+
+for (var i = 1; i < _ds_h; i += 1) {
+	notes[i-1] = {
+		idx: real(_csv[# 0, i]),
+		note: _csv[# 1, i],
+		octave: real(_csv[# 2, i]),
+		start_sec: real(_csv[# 3, i]),
+	}
+	show_debug_message(notes[i-1])
+}
+
+last_played_idx = 0
+
+player_pos_perc = 0.1984
+player_pos = player_pos_perc * sprite_width
+
+var TRACK_W = (1 - player_pos_perc) * sprite_width
+NOTE_SPEED_PX_PER_SEC = 600
+note_sec_in_advance = TRACK_W / NOTE_SPEED_PX_PER_SEC
+
+audio_started = false
+start_time = get_timer()
+
+end_time = start_time + (
+max(audio_sound_length(enemy_music), audio_sound_length(hero_music)) + 2
+) * 1_000_000
+
+note_percs = [0.1121, 0.3076, 0.5, 0.6942, 0.8831]
+note_positions = [0, 0, 0, 0, 0]
+
+
+note_clicked_this_frame = false
+
+note_indexes = []
+for (var i = 0; i < 5; i += 1) {
+	array_push(note_indexes, ds_queue_create())
+}
+
+//for (var i = 0; i < array_length(note_percs); i += 1) {
+	//note_positions[i] = note_percs * sprite_height	
+//}
+
+player_confidence = 0
