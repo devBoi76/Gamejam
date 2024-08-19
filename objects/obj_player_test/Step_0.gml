@@ -6,8 +6,32 @@
 	var _jump = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space)
 	|| keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
 	
+	// controlling player sprite sprite
 	if(_left){last_direction = -1;}
 	if(_right){last_direction = 1;}
+	
+	
+	if( past_failing >= failing && !_left && !_right  && past_failing * max_y_speed > control_failing_speed)
+	{ did_landed = true; }
+	else if(failing)
+	{
+		//did_landed = false;
+		if(y_speed < - control_flying_speed)
+		{
+			sprite_index = spr_player_jumping;
+		}
+		else if( y_speed >= -control_flying_speed && y_speed <= control_flying_speed )
+		{
+			sprite_index = spr_player_flying;
+		}
+		else
+		{
+			sprite_index = spr_player_falling;
+		}
+	}
+	else { if(_left || _right){did_landed = false;} sprite_index = spr_player };
+	if(did_landed){sprite_index = spr_player_jumping_ready;}
+	
 	
 	//// Adjusting silppery and controling jump buffor.
 	current_slippery = slippery + ( - failing * (slippery - 1) * air_slippery );
@@ -27,11 +51,10 @@ x = clamp( x + x_speed , 1 , room_width - hitbox_width -1 );
 	//// controling player Y movement.
 y_speed = clamp(y_speed + gravity_force , - max_y_speed , max_y_speed );
 if(coyote_jump && jump_buffor && can_move ) { y_speed = - jump_height; jump_buffor = 0; }
+	past_failing = y_speed / max_y_speed;
 y_speed = try_move_y( y_speed , hitbox_width , hitbox_height );
 y = clamp( y + y_speed , 1 , room_height - hitbox_height -1 );
 
-
-	
 
 
 	//// Camera controls.

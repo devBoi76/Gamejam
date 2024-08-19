@@ -62,7 +62,9 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 				current_text = -1;
 			} else if (dialog_array[current_text + 1] == "`FIGHT_NEXT_STAGE") {
 				oNoteSpawner.fight_has_started = true
-				current_text = - 1	
+				current_text = -1;
+				is_over = true;
+	
 			}
 			else
 			{

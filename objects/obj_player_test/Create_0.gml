@@ -29,12 +29,12 @@ jump_buffor = 0;
 coyote_jump_length = 10;
 coyote_jump = 0;
 
-
+past_failing = failing;
 last_direction = 1;
-sprite_walking = spr_player;
-
-
-sprite_index = sprite_walking;
+control_flying_speed = 7;
+control_failing_speed = 25;
+did_landed = false;
+sprite_index = spr_player;
 
 layer_hitbox_id = layer_get_id("Tiles_Hitbox");
 global.tilemap_hitbox_id = layer_tilemap_get_id(layer_hitbox_id);

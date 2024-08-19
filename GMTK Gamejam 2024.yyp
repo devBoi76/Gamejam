@@ -42,7 +42,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.2.0.132",
   },
   "name":"GMTK Gamejam 2024",
   "resources":[
@@ -107,6 +107,11 @@
     {"id":{"name":"spr_npc_test_attention","path":"sprites/spr_npc_test_attention/spr_npc_test_attention.yy",},},
     {"id":{"name":"spr_npc_test","path":"sprites/spr_npc_test/spr_npc_test.yy",},},
     {"id":{"name":"spr_pieciolinia","path":"sprites/spr_pieciolinia/spr_pieciolinia.yy",},},
+    {"id":{"name":"spr_player_falling","path":"sprites/spr_player_falling/spr_player_falling.yy",},},
+    {"id":{"name":"spr_player_flying","path":"sprites/spr_player_flying/spr_player_flying.yy",},},
+    {"id":{"name":"spr_player_jumping_ready","path":"sprites/spr_player_jumping_ready/spr_player_jumping_ready.yy",},},
+    {"id":{"name":"spr_player_jumping_go","path":"sprites/spr_player_jumping_go/spr_player_jumping_go.yy",},},
+    {"id":{"name":"spr_player_jumping","path":"sprites/spr_player_jumping/spr_player_jumping.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_sluzek_1","path":"sprites/spr_sluzek_1/spr_sluzek_1.yy",},},
     {"id":{"name":"spr_sluzek_2","path":"sprites/spr_sluzek_2/spr_sluzek_2.yy",},},
