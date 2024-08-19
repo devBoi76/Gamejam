@@ -1,3 +1,4 @@
+room_goto(rFight);
 
 if file_exists("en.json") {
 
