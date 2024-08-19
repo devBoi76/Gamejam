@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"e096f961-355f-4b64-8f98-4326aa12c43a","name":"e096f961-355f-4b64-8f98-4326aa12c43a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"76c64fcd-321a-43c0-a137-65e8a36490e3","name":"76c64fcd-321a-43c0-a137-65e8a36490e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"ca033f9e-a7f4-4ef4-bf1e-476812e76ac5","name":"ca033f9e-a7f4-4ef4-bf1e-476812e76ac5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"e18dbdce-8589-422e-8d7b-13122dbfe6b3","name":"e18dbdce-8589-422e-8d7b-13122dbfe6b3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
@@ -73,14 +73,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"218d83c5-6dad-48cb-9b7d-a1b5d3350aa8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e096f961-355f-4b64-8f98-4326aa12c43a","path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5c00cab5-ae1a-4eec-862e-f361fbfcec4d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"5c00cab5-ae1a-4eec-862e-f361fbfcec4d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76c64fcd-321a-43c0-a137-65e8a36490e3","path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5ae5c308-0385-4304-ae15-c3e9745367cf","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"5ae5c308-0385-4304-ae15-c3e9745367cf","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f9f5a79-903b-4fc4-88fa-1ae158d4bd0e","path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"218d83c5-6dad-48cb-9b7d-a1b5d3350aa8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ca033f9e-a7f4-4ef4-bf1e-476812e76ac5","path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"14550e73-1014-4c47-badd-06d28dc657b1","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

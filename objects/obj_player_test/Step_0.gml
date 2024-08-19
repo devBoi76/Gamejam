@@ -52,3 +52,9 @@ oCamera.move_target_py = _gotoY;
 
 	//// Temporary
 if(keyboard_check(vk_enter)){ x = old_x; y = old_y; }
+
+// aktualizuj pozycje dla listenera audio
+audio_listener_position(x-sprite_width/2, y, 0)
+audio_listener_orientation(0, 0, -1000, 0, 1, 0)
+//audio_listener_orientation(0, 0, 1, lengthdir_x(1, direction), lengthdir_y(1, direction), 0);
+

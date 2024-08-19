@@ -1,0 +1,72 @@
+{	"lang": "English",
+	"buttons": {
+		"settings": "Settings",
+		"exit_game": "Exit"
+	},
+	"inventory": [ 
+		{
+			"item1": "Przedmiot1",
+			"item2": "Przedmiot2",
+			"item3": "Przedmiot3"
+		},{
+			"item1": "opis przedmiotu pierwszego",
+			"item2": "opis przedmiotu drugiego",
+			"item3": "opis przedmiotu trzeciego"
+		}
+	],
+    "npc": [
+        {
+            "name": "Kajak Krzysztof",
+            "dialogs": [
+                "Jezdem Enpedzem!",
+                "Nie wiem, ale sie domyslam",
+                "xd Nie wiem"
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "Grzegorz Brzeczyszczykiewicz",
+            "dialogs": [
+                "Lubie pizze",
+                "Lubie rosol",
+		"nie lubie cie, a tak w ogole to czy wiedziales ze dinozaury zyly 66 minionow lat temu a nie tak jak mawiaja w telewizorni ze 65 milionow lat temu, i nie mam bladego pojecia dlaczego tak mowia.",
+		"`CS6wysyĹ‚am cie do pokoju startowego",
+		"`Xroom_start"
+            ],
+            "sprite": "spr_npc_test",
+            "goto_x": 330,
+            "goto_y": 450,
+        },
+        {
+          "name": "Blob end fight",
+          "dialogs": [
+            "Przygotuj siÄ™!",
+            "Zaraz ciÄ™ zblobujÄ™!!",
+            "`FIGHT_NEXT_STAGE",
+          ],
+          "sprite": "spr_npc_test",
+        },
+        {
+          "name": "Blob",
+          "dialogs": [
+            "A kogo my tu mamy",
+            "`XrFightBlob",
+          ],
+          "sprite": "spr_sluzek_overworld",
+          "sprite_scale": 0.1,
+          "goto_x": 0,
+          "goto_y": 0,
+        },
+      {
+          "name": "Pipe",
+          "dialogs": [
+            "Jestem rurom",
+            "`XrFightPipe",
+          ],
+          "sprite": "spr_rura_overworld",
+          "sprite_scale": 0.1,
+          "goto_x": 0,
+          "goto_y": 0,
+        }
+    ]
+}

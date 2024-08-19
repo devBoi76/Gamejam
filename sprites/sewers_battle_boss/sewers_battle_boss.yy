@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"tla",
-    "path":"folders/tla.yy",
+    "name":"przeciwnicy",
+    "path":"folders/przeciwnicy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

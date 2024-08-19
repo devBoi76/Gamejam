@@ -2,24 +2,24 @@
   "$GMSprite":"",
   "%Name":"spr_pieciolinia",
   "bboxMode":0,
-  "bbox_bottom":1610,
+  "bbox_bottom":806,
   "bbox_left":0,
-  "bbox_right":3839,
-  "bbox_top":69,
+  "bbox_right":1919,
+  "bbox_top":33,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"26cd046b-57af-493d-9873-1b800033343a","name":"26cd046b-57af-493d-9873-1b800033343a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"be259fad-528d-4b45-a9a6-d3b143bdbf51","name":"be259fad-528d-4b45-a9a6-d3b143bdbf51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":1668,
+  "height":834,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"dde6d6e7-402f-45c6-b768-432eeb5ba3a7","blendMode":0,"displayName":"default","isLocked":false,"name":"dde6d6e7-402f-45c6-b768-432eeb5ba3a7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"9db213ae-ce87-46ef-ba2f-26307b0ca0a7","blendMode":0,"displayName":"default","isLocked":false,"name":"9db213ae-ce87-46ef-ba2f-26307b0ca0a7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_pieciolinia",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"26cd046b-57af-493d-9873-1b800033343a","path":"sprites/spr_pieciolinia/spr_pieciolinia.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4bba660c-8d9f-40f8-a695-e9c6d19e80b0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be259fad-528d-4b45-a9a6-d3b143bdbf51","path":"sprites/spr_pieciolinia/spr_pieciolinia.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"eb82f55a-7732-4832-bd28-f138ebcbe5a4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":3840,
+  "width":1920,
 }

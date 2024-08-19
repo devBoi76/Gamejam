@@ -44,7 +44,7 @@ var TRACK_W = (1 - player_pos_perc) * sprite_width
 NOTE_SPEED_PX_PER_SEC = 600
 note_sec_in_advance = TRACK_W / NOTE_SPEED_PX_PER_SEC
 
-fight_has_started = false
+fight_has_started = not prefight_chat
 audio_started = false
 start_time = 0
 
@@ -54,6 +54,7 @@ note_percs = [0.1121, 0.3076, 0.5, 0.6942, 0.8831]
 note_positions = [0, 0, 0, 0, 0]
 
 note_clicked_this_frame = false
+last_player_note_missed = false
 
 note_indexes = []
 for (var i = 0; i < 5; i += 1) {
@@ -72,3 +73,6 @@ if (prefight_chat) {
 
 gui_win_loose_x = 640
 gui_win_loose_y = 64
+
+hero_audio = 0
+sync_group = audio_create_sync_group(false)
