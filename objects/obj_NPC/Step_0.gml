@@ -12,7 +12,7 @@ stretch = sin( current_time * 0.002 ) * 3;
 
 attention(want_talk);
 
-if(keyboard_check_pressed(ord("X")))
+if(keyboard_check_pressed(ord("X")) && want_talk)
 {
-	random_i = irandom(array_length(dialogs_array) -1 );
+	my_textbox.next_dialog();
 }

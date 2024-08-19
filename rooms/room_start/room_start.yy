@@ -19,7 +19,8 @@
           -2,1,-18,-2147483648,-2,1,-18,-2147483648,2,1,0,-18,-2147483648,2,1,0,-6,-2147483648,-4,0,-8,-2147483648,
           -2,0,-18,-2147483648,-2,0,-18,-2147483648,-2,0,-18,-2147483648,1,0,-3,1,-7,-2147483648,-5,0,-4,-2147483648,
           1,0,-6,1,-13,-2147483648,1,0,-6,1,-12,-2147483648,-10,1,-9,-2147483648,-12,1,-7,-2147483648,-2,1,1,-2147483648,
-          -10,1,-6,-2147483648,-2,1,-2,-2147483648,-10,1,-5,-2147483648,-2,1,-3,-2147483648,-21,1,
+          -10,1,-2,-2147483648,1,0,-3,-2147483648,-2,1,-2,-2147483648,-10,1,-5,-2147483648,-2,1,-3,-2147483648,
+          -21,1,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_tileset_hitbox","path":"tilesets/ts_tileset_hitbox/ts_tileset_hitbox.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":30,"gridY":30,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_463718A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_463718A5","objectId":{"name":"obj_room_mark","path":"objects/obj_room_mark/obj_room_mark.yy",},"properties":[

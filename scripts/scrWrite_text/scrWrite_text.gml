@@ -40,7 +40,7 @@ function write_text(_x,_y,_text,_is_anim,_px_per_line,_anim_progress=-1, _anim_s
 	
 	
 	
-	for (var i = 0; i < _displayed_text; i += 1)	{
+	for (var i = 1; i <= _displayed_text; i += 1)	{
 		var _current_char = string_char_at(_text,i);
 		
 		//Analiza znaku `

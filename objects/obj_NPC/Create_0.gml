@@ -15,6 +15,8 @@ for( var _i = 0 ; _i < array_length(dialogs_array) ; _i++ )
 	dialogs_array[_i] = global.lang.npc[index].dialogs[_i];
 }
 
+my_textbox = new textbox_create( index , instance_nearest( x , y , obj_player_test) , 50 , 50 );
+
 
 function attention( _on)
 {
