@@ -102,6 +102,7 @@ save_constructor = function() constructor
 	
 }
 
+global.universal_constant = sprite_get_height(spr_tileset);
 
 global.save = new save_constructor();
 
