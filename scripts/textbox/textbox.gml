@@ -1,6 +1,6 @@
 // W wersji v2.3.0 zmieniono zasoby skryptu. Więcej informacji można znaleźć pod adresem
 // https://help.yoyogames.com/hc/en-us/articles/360005277377
-function textbox_create(_npc_id , _player_id , my_x , my_y ) constructor
+function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constructor
 {
 	_x = my_x;
 	_y = my_y;
@@ -11,6 +11,9 @@ function textbox_create(_npc_id , _player_id , my_x , my_y ) constructor
 	appear = 0;
 	appearing_speed = 0.05;
 	is_ended = false;
+	is_shown = true;
+	name = global.lang.npc[npc_id].name;
+	margin = _margin;
 	
 	
 	dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs));
@@ -19,18 +22,23 @@ function textbox_create(_npc_id , _player_id , my_x , my_y ) constructor
 		dialog_array[_i] = global.lang.npc[npc_id].dialogs[_i];
 	}
 	
-	static draw_dialog = function(textbox_sprite)
+	//// draws current dialog
+	
+	static draw_dialog = function(textbox_sprite , namebox_sprite)
 	{
-		draw_sprite_ext(textbox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 ), appear , appear , 0 , c_white , appear );
-		if( ! (current_text == -1) )
+		if(is_shown)
 		{
-			if(appear == 1)
+			draw_sprite_ext(textbox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 ), appear , appear , 0 , c_white , appear );
+			draw_sprite_ext(namebox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 )  - ( ( sprite_get_height(namebox_sprite) / 2 ) * appear) , appear , appear , 0 , c_white , appear );
+			if( ! (current_text == -1) && appear == 1)
 			{
-				animation_progress = write_text( _x , _y , dialog_array[current_text] , true , sprite_get_width(textbox_sprite) , animation_progress ) ;
+					write_text( _x + margin , _y , name , false , sprite_get_width(namebox_sprite) - margin * 2);
+					animation_progress = write_text( _x + margin, _y + ( sprite_get_height(namebox_sprite) / 2 ) + margin , dialog_array[current_text] , true , sprite_get_width(textbox_sprite) - 2 * margin , animation_progress ) ;
 			}
 		}
 	}
 	
+	//// switches to a next dialog
 	static next_dialog = function()
 	{
 		if(animation_progress == -1 || current_text == -1)
@@ -59,6 +67,7 @@ function textbox_create(_npc_id , _player_id , my_x , my_y ) constructor
 		}	
 	}
 	
+	//// controls dilaog apperance
 	static dialog_appear = function()
 	{
 		if(current_text != -1)
@@ -78,6 +87,15 @@ function textbox_create(_npc_id , _player_id , my_x , my_y ) constructor
 		}
 	}
 	
+	//// minor function
+	static dialog_turn_off = function() { current_text = -1; }
+	static dilaog_hide = function() { is_shown = false; }
+	static dilaog_show = function() { is_shown = true; }
+	static dialog_set_name = function( _name )
+	{
+		name = "name";
+	}
+	
 }
 
 function start_fight( _player_id , _fight_room)
@@ -87,9 +105,11 @@ function start_fight( _player_id , _fight_room)
 	_player_id.can_move = false;
 	}
 	
-	_fading_id = instance_create_depth( 0 , 0 , -999 , obj_fading_room);
-	_fading_id.target_room = _fight_room;
-	_fading_id.is_fading = true;
-	global.target.x = 330;
-	global.target.y = 450;
+	//_fading_id = instance_create_depth( 0 , 0 , -999 , obj_fading_room);
+	//_fading_id.target_room = _fight_room;
+	//_fading_id.is_fading = true;
+	//global.target.x = 330;
+	//global.target.y = 450;
+	
+	room_fade( 330 , 450 , room_start);
 }

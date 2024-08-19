@@ -42,7 +42,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.2.0.132",
   },
   "name":"GMTK Gamejam 2024",
   "resources":[
@@ -77,8 +77,7 @@
     {"id":{"name":"rTest","path":"rooms/rTest/rTest.yy",},},
     {"id":{"name":"collision_x","path":"scripts/collision_x/collision_x.yy",},},
     {"id":{"name":"collision_y","path":"scripts/collision_y/collision_y.yy",},},
-    {"id":{"name":"save_load","path":"scripts/save_load/save_load.yy",},},
-    {"id":{"name":"save_write","path":"scripts/save_write/save_write.yy",},},
+    {"id":{"name":"room_fade","path":"scripts/room_fade/room_fade.yy",},},
     {"id":{"name":"scrButtons","path":"scripts/scrButtons/scrButtons.yy",},},
     {"id":{"name":"scrCamFns","path":"scripts/scrCamFns/scrCamFns.yy",},},
     {"id":{"name":"scrNoteTypes","path":"scripts/scrNoteTypes/scrNoteTypes.yy",},},
@@ -116,6 +115,7 @@
     {"id":{"name":"spr_sluzek","path":"sprites/spr_sluzek/spr_sluzek.yy",},},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"spr_namebox","path":"sprites/spr_namebox/spr_namebox.yy",},},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
     {"id":{"name":"trash_gang4","path":"sprites/trash_gang4/trash_gang4.yy",},},
     {"id":{"name":"waga_center","path":"sprites/waga_center/waga_center.yy",},},

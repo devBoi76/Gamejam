@@ -1,9 +1,9 @@
 {
-  "$GMScript":"v1",
-  "%Name":"save_write",
+  "$GMScript":"",
+  "%Name":"room_fade",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"save_write",
+  "name":"room_fade",
   "parent":{
     "name":"AAA",
     "path":"folders/AAA.yy",

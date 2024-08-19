@@ -1,3 +1,3 @@
 /// @description Wstaw opis w tym miejscu
 // W tym edytorze możesz zapisać swój kod
-save_write("save");
+global.save.write("save");

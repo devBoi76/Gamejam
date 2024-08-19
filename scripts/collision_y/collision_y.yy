@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"collision_y",
   "isCompatibility":false,
   "isDnD":false,

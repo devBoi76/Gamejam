@@ -39,6 +39,6 @@ sprite_index = sprite_walking;
 layer_hitbox_id = layer_get_id("Tiles_Hitbox");
 global.tilemap_hitbox_id = layer_tilemap_get_id(layer_hitbox_id);
 
-instance_create_depth( 0 , 0 , -999 , obj_fading_room);
+room_unfade();
 
 global.save.save_room = room_get_name(room);
