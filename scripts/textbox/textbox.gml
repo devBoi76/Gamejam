@@ -1,6 +1,6 @@
 // W wersji v2.3.0 zmieniono zasoby skryptu. Więcej informacji można znaleźć pod adresem
 // https://help.yoyogames.com/hc/en-us/articles/360005277377
-function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constructor
+function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialog_option = 0 ) constructor
 {
 	_x = my_x;
 	_y = my_y;
@@ -15,10 +15,12 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 	margin = _margin;
 	is_over = false
 	
-	dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs));
+	if( dialog_option > array_length(global.lang.npc[npc_id].dialogs) - 1) { dialog_option = 0; }
+	
+	dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs[dialog_option]));
 	for( var _i = 0 ; _i < array_length(dialog_array) ; _i++ )
 	{
-		dialog_array[_i] = global.lang.npc[npc_id].dialogs[_i];
+		dialog_array[_i] = global.lang.npc[npc_id].dialogs[dialog_option][_i];
 	}
 	
 	//// draws current dialog
@@ -28,7 +30,7 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 		if(is_shown)
 		{
 			draw_sprite_ext(textbox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 ), appear , appear , 0 , c_white , appear );
-			draw_sprite_ext(namebox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 )  - ( ( sprite_get_height(namebox_sprite) / 2 ) * appear) , appear , appear , 0 , c_white , appear );
+			if(name != "") draw_sprite_ext(namebox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 )  - ( ( sprite_get_height(namebox_sprite) / 2 ) * appear) , appear , appear , 0 , c_white , appear );
 			if( ! (current_text == -1) && appear == 1)
 			{
 					write_text( _x + margin , _y , name , false , sprite_get_width(namebox_sprite) - margin * 2);
@@ -104,7 +106,23 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0) constr
 	{
 		name = "name";
 	}
-	
+	static dialog_option_set = function( _number ) 
+	{
+			if( _number >= array_length(global.lang.npc[npc_id].dialogs) ) { return false; }
+			else
+			{
+				dialog_option = _number;
+				dialog_array = [];
+				dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs[dialog_option]));
+				for( var _i = 0 ; _i < array_length(dialog_array) ; _i++ )
+				{
+					dialog_array[_i] = global.lang.npc[npc_id].dialogs[dialog_option][_i]; 
+				}
+				current_text = -1;
+				return true; 
+			}
+			
+	}
 }
 
 function start_fight( _player_id , _fight_room , last_pos = true)
@@ -113,17 +131,12 @@ function start_fight( _player_id , _fight_room , last_pos = true)
 	{
 	_player_id.can_move = false;
 	}
-	
-	//_fading_id = instance_create_depth( 0 , 0 , -999 , obj_fading_room);
-	//_fading_id.target_room = _fight_room;
-	//_fading_id.is_fading = true;
-	//global.target.x = 330;
-	//global.target.y = 450;
+
 	if(last_pos) {
 		global.last_player_pos.x = obj_player_test.x
 		global.last_player_pos.y = obj_player_test.y
 	}
 	
-	
-	room_fade(global.lang.npc[npc_id].goto_x, global.lang.npc[npc_id].goto_y, _fight_room);
+
+room_fade(global.lang.npc[npc_id].goto_x, global.lang.npc[npc_id].goto_y, _fight_room);
 }

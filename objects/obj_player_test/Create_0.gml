@@ -13,11 +13,12 @@ hitbox_width = 30;
 
 x = clamp(global.target.x , 1 , room_width - hitbox_width -1 );
 y = clamp(global.target.y , 1 , room_height - hitbox_height -1 );
+y_speed = clamp(global.target.y_speed , -30 , 20);
 
 old_x = x;
 old_y = y;
 
-y_speed = 0;
+//y_speed = 0
 gravity_force = 1;
 jump_height = 20;
 failing = false;
@@ -33,6 +34,7 @@ past_failing = failing;
 last_direction = 1;
 control_flying_speed = 7;
 control_failing_speed = 25;
+control_x_speed = 1;
 did_landed = false;
 sprite_index = spr_player;
 
@@ -40,5 +42,33 @@ layer_hitbox_id = layer_get_id("Tiles_Hitbox");
 global.tilemap_hitbox_id = layer_tilemap_get_id(layer_hitbox_id);
 
 room_unfade();
+
+function adjust_sprite(_left , _right , _jump)
+{
+	var _image_index = image_index;
+	if( past_failing >= failing && !_left && !_right  && past_failing * max_y_speed > control_failing_speed)
+	{ did_landed = true; }
+	else if(failing)
+	{
+		//did_landed = false;
+		if(y_speed < - control_flying_speed)
+		{
+			sprite_index = spr_player_jumping;
+		}
+		else if( y_speed >= -control_flying_speed && y_speed <= control_flying_speed )
+		{
+			sprite_index = spr_player_flying;
+		}
+		else
+		{
+			sprite_index = spr_player_falling;
+		}
+	}
+	else { if(_left || _right){did_landed = false;} sprite_index = spr_player_standing; };
+	if(did_landed){sprite_index = spr_player_jumping_ready;}
+	image_index = _image_index;
+    if (sprite_index == spr_player_jumping_ready && image_index >= image_number - 1) {did_landed = false; sprite_index = spr_player_standing }
+	if( (x_speed < -control_x_speed || x_speed > control_x_speed) && !failing ){sprite_index = spr_player; }
+}
 
 global.save.save_room = room_get_name(room);

@@ -12,16 +12,10 @@ file_text_close(file);
 global.lang = json_parse(json_string);
 }
 
-global.target =
-{
-	x : 330,
-	y : 450
-}
-
 global.last_player_pos =
 {
 	x: 0,
-	y: 0,
+	y: 0
 }
 
 
@@ -108,9 +102,20 @@ save_constructor = function() constructor
 	
 }
 
+
 global.save = new save_constructor();
 
 global.save.load("save");
+
+global.target =
+{
+	x : global.save.save_x,
+	y : global.save.save_y,
+	y_speed : 0
+}
+
+
+global.npc_dialog_options = array_create(array_length(global.lang.npc) , 0 );
 
 room_goto(asset_get_index(global.save.save_room));
 

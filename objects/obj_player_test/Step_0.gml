@@ -5,32 +5,21 @@
 	var _right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 	var _jump = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space)
 	|| keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_up);
+
+
+	//// controling player X movement.
+	x_speed = x_speed / current_slippery;
+	if(can_move){x_speed = x_speed + (_right - _left) * acceleration ;}
+	x_speed = try_move_x( x_speed , hitbox_width , hitbox_height );
+	x = clamp( x + x_speed , 1 , room_width - hitbox_width -1 );
+	
 	
 	// controlling player sprite sprite
 	if(_left){last_direction = -1;}
 	if(_right){last_direction = 1;}
+
+	adjust_sprite( _left , _right , _jump);
 	
-	
-	if( past_failing >= failing && !_left && !_right  && past_failing * max_y_speed > control_failing_speed)
-	{ did_landed = true; }
-	else if(failing)
-	{
-		//did_landed = false;
-		if(y_speed < - control_flying_speed)
-		{
-			sprite_index = spr_player_jumping;
-		}
-		else if( y_speed >= -control_flying_speed && y_speed <= control_flying_speed )
-		{
-			sprite_index = spr_player_flying;
-		}
-		else
-		{
-			sprite_index = spr_player_falling;
-		}
-	}
-	else { if(_left || _right){did_landed = false;} sprite_index = spr_player };
-	if(did_landed){sprite_index = spr_player_jumping_ready;}
 	
 	
 	//// Adjusting silppery and controling jump buffor.
@@ -41,12 +30,6 @@
 
 
 is_mirrored = ! bool( x_speed + 0.5);
-
-	//// controling player X movement.
-x_speed = x_speed / current_slippery;
-if(can_move){x_speed = x_speed + (_right - _left) * acceleration ;}
-x_speed = try_move_x( x_speed , hitbox_width , hitbox_height );
-x = clamp( x + x_speed , 1 , room_width - hitbox_width -1 );
 
 	//// controling player Y movement.
 y_speed = clamp(y_speed + gravity_force , - max_y_speed , max_y_speed );

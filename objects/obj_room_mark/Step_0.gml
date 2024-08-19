@@ -14,7 +14,7 @@ if(place_meeting( x , y , obj_player_test ))
 		//_fading_room.is_fading = true;
 		//_fading_room.target_room = room_to;
 		//_fading_room.tint = 0;
-		room_fade( x_target , y_target , room_to );
+		room_fade( x_target , y_target , room_to , y_speed_target );
 	}
 }
 else

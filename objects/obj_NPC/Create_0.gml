@@ -10,6 +10,7 @@ if struct_exists(global.lang.npc[index], "sprite_scale") {
 attention_distance = 50;
 stretch = 0;
 random_i = 0;
+enemy_status_defeated = false;
 
 attention_variable = 0;
 
@@ -37,4 +38,9 @@ function attention( _on)
 	{
 		other.attention_variable = clamp(other.attention_variable - 0.05 , 0 , 1);
 	}
+}
+
+if( enemy_index > -1 )
+{
+	enemy_status_defeated = global.save.enemies[enemy_index];
 }

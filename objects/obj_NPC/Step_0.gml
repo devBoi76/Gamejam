@@ -18,6 +18,7 @@ and not block_manual_start) and
 	my_textbox.next_dialog();
 }
 
+
 if (start_force_talking) {
 	show_debug_message("START_FORCE_TALKING!!!")
 	my_textbox.next_dialog()
