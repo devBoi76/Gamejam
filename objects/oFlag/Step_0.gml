@@ -1,7 +1,10 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 
 var _collides = place_meeting(x, y, obj_player_test)
+
+show_debug_message("FLAG COLLIDES!!" + string(_collides))	
+
 
 var _t = get_timer()
 

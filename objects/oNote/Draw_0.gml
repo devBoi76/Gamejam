@@ -3,8 +3,8 @@
 draw_sprite_ext(sprite_index, 0, x, y,
 	image_xscale, image_yscale, image_angle, c_white, image_alpha)
 
-draw_set_color(c_lime)
-draw_circle(x, y, 10, false)
+//draw_set_color(c_lime)
+//draw_circle(x, y, 10, false)
 //draw_self()
 
 //var first = ds_queue_head(oNoteSpawner.note_indexes[note_index]) == id

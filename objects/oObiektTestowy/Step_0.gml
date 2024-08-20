@@ -1,1 +1,1 @@
-//przyciski.step();
+przyciski.step();

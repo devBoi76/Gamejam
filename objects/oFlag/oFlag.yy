@@ -29,13 +29,13 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"","%Name":"cam_zoom","filters":[],"listItems":[],"multiselect":false,"name":"cam_zoom","rangeEnabled":false,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
-    {"$GMObjectProperty":"","%Name":"duration","filters":[],"listItems":[],"multiselect":false,"name":"duration","rangeEnabled":false,"rangeMax":100.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"","%Name":"cam_lock_px","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_px","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
-    {"$GMObjectProperty":"","%Name":"cam_lock_py","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_py","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
-    {"$GMObjectProperty":"","%Name":"cam_lock_duration","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_duration","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
-    {"$GMObjectProperty":"","%Name":"trigger_delay","filters":[],"listItems":[],"multiselect":false,"name":"trigger_delay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"","%Name":"function_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v1","%Name":"cam_zoom","filters":[],"listItems":[],"multiselect":false,"name":"cam_zoom","rangeEnabled":false,"rangeMax":20.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"duration","filters":[],"listItems":[],"multiselect":false,"name":"duration","rangeEnabled":false,"rangeMax":100.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"cam_lock_px","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_px","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"cam_lock_py","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_py","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"cam_lock_duration","filters":[],"listItems":[],"multiselect":false,"name":"cam_lock_duration","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"NaN","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"trigger_delay","filters":[],"listItems":[],"multiselect":false,"name":"trigger_delay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"function_type","filters":[],"listItems":[
         "FnType.LINEAR",
         "FnType.EASE",
         "FnType.EASE_IN_OUT",
