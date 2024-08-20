@@ -1,4 +1,4 @@
-room_goto(rFightBlob);
+room_goto(rMenu);
 
 if file_exists("en.json") {
 
@@ -105,6 +105,7 @@ save_constructor = function() constructor
 	
 	static reset = function()
 	{
+		current_scale = 1;
 		save_room = "room_start";
 		save_x = 100;
 		save_y = 100;
@@ -136,6 +137,6 @@ global.target =
 
 global.npc_dialog_options = array_create(array_length(global.lang.npc) , 0 );
 
-room_goto(asset_get_index(global.save.save_room));
+//room_goto(asset_get_index(global.save.save_room));
 
 randomize();

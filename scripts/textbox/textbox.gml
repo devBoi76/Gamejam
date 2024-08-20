@@ -48,6 +48,12 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialo
 		if (is_over) {
 			return
 		}
+		if(current_text >= array_length(dialog_array))
+		{
+			current_text = -1;
+			is_over = true;
+			return;
+		}
 		
 		if(animation_progress == -1 || current_text == -1)
 			{
@@ -79,7 +85,32 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialo
 			else if (dialog_array[current_text + 1] == "`SAVE_POINT")
 			{
 				global.save.write("save");
-				current_text = - 1	;
+				safe_move();
+			}
+			else if(string_char_at( dialog_array[current_text + 1] , 1) == "`" && string_char_at( dialog_array[current_text + 1] , 2) == "Y")
+			{
+				if( real(string_delete(dialog_array[current_text + 1] , 1 , 2)) >= array_length(global.lang.npc[npc_id].dialogs) ) { safe_move();}
+				else
+				{
+					dialog_option = real(string_delete(dialog_array[current_text + 1] , 1 , 2));
+					dialog_array = [];
+					dialog_array = array_create(array_length(global.lang.npc[npc_id].dialogs[dialog_option]));
+					for( var _i = 0 ; _i < array_length(dialog_array) ; _i++ )
+					{
+						dialog_array[_i] = global.lang.npc[npc_id].dialogs[dialog_option][_i]; 
+					}
+					current_text = -1; 
+				}
+			}
+			else if(string_char_at( dialog_array[current_text + 1] , 1) == "`" && string_char_at( dialog_array[current_text + 1] , 2) == "M")
+			{
+				name = string_delete(dialog_array[current_text + 1] , 1 , 2);
+				safe_move();
+			}
+			else if(string_char_at( dialog_array[current_text + 1] , 1) == "`" && string_char_at( dialog_array[current_text + 1] , 2) == "H")
+			{
+				name = global.lang.npc[npc_id].name;
+				safe_move();
 			}
 			else
 			{
@@ -146,7 +177,11 @@ function start_fight( _player_id , _fight_room , last_pos = true)
 		global.last_player_pos.x = obj_player_test.x
 		global.last_player_pos.y = obj_player_test.y
 	}
-	
-
 room_fade(global.lang.npc[npc_id].goto_x, global.lang.npc[npc_id].goto_y, _fight_room);
+}
+
+function safe_move()
+{
+	current_text += 2;
+	if(current_text >= array_length(dialog_array)){current_text = -1; is_over = true;}
 }

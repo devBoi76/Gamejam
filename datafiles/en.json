@@ -2,7 +2,9 @@
     "lang": "English",
     "buttons": {
         "settings": "Settings",
-        "exit_game": "Exit"
+        "exit_game": "Exit",
+	"reset_game" : "Reset Game",
+	"continue" : "Start"
     },
     "inventory": [
         {
@@ -41,7 +43,12 @@
                     "Lubie rosol",
                     "nie lubie cie, a tak w ogole to czy wiedziales ze dinozaury zyly 66 minionow lat temu a nie tak jak mawiaja w telewizorni ze 65 milionow lat temu, i nie mam bladego pojecia dlaczego tak mowia.",
                     "`CS6wysylam cie do pokoju startowego",
-                    "`Xroom_start"
+"`MMandeline",
+"Co??",
+"`H",
+"sample_text",
+"cos jeszze",
+                    "`Y1"
                 ],
                 [
                     "zmienilem swoj umysl",
@@ -151,7 +158,8 @@
                 [
                     "xd!!!",
                     "`XrFightTest"
-                ]
+                ],
+["jestem pokonany"]
             ],
             "sprite": "spr_rat_overworld",
             "sprite_scale": 0.1,

@@ -54,10 +54,7 @@ if (start_force_talking) {
 
 if( enemy_index > -1 and global.save.enemies[enemy_index])
 {
-	if(my_textbox.dialog_option_set(1))
-	{
-		talk_only_once = false;
-	}
+	my_textbox.dialog_option_set(1);
 }
 
 
