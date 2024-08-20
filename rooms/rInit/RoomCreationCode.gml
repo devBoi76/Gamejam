@@ -21,6 +21,7 @@ global.last_player_pos =
 
 save_constructor = function() constructor
 {
+	current_scale = 1;
 	save_room = "room_start";
 	save_x = 100;
 	save_y = 100;
@@ -36,6 +37,7 @@ save_constructor = function() constructor
 	static load = function(_save_name)
 	{
 	ini_open(_save_name);
+	current_scale = ini_read_real( "scale" , "scale" , 1 );
 	save_room = ini_read_string("room" , "save_room" , "room_start");
 	save_x = ini_read_real("room" , "save_x" , 100);
 	save_y = ini_read_real("room" , "save_y" , 100);
@@ -69,6 +71,7 @@ save_constructor = function() constructor
 	static write = function(_save_name)
 	{
 	ini_open(_save_name);
+	ini_write_real("scale" , "scale" , current_scale );
 	ini_write_string( "room" , "save_room" ,save_room );
 	ini_write_real( "room" , "save_x" ,save_x );
 	ini_write_real( "room" , "save_y" ,save_y );

@@ -1,12 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"oPipe",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"oPipe",
   "overriddenProperties":[],
@@ -14,7 +9,10 @@
     "name":"pipe",
     "path":"folders/przeciwnicy/pipe.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oBlob",
+    "path":"objects/oBlob/oBlob.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"anim_sluzek_fight",
-    "path":"sprites/anim_sluzek_fight/anim_sluzek_fight.yy",
+    "name":"rura_4",
+    "path":"sprites/rura_4/rura_4.yy",
   },
   "spriteMaskId":null,
   "visible":true,

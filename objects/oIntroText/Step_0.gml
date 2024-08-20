@@ -14,7 +14,7 @@ if not _anim_started  {
 
 if not appear_finished {
 	var _appear_progress = (get_timer() - start_time) / (appear_end_time - start_time)
-	show_debug_message("appear: " + string(_appear_progress))
+	//show_debug_message("appear: " + string(_appear_progress))
 	if (_appear_progress >= 0.999) {
 		appear_finished = true
 	} else {
@@ -29,7 +29,7 @@ if not appear_finished {
 		y = lerp(y, y_target - hold_up_shift, 0.01)
 	}
 	var _unfade_progress = (get_timer() - appear_end_time) / (unfade_end_time - appear_end_time)
-	show_debug_message("unfade: " + string(_unfade_progress))
+	//show_debug_message("unfade: " + string(_unfade_progress))
 	image_alpha = lerp(1, 0, bezier(0, 1, 0, 1, _unfade_progress))
 	if (_unfade_progress >= 0.999) {
 		unfade_finished = true

@@ -77,24 +77,92 @@
             "goto_y": 0
         },
         {
-            "name": "Blob",
+            "name": "Rur",
             "dialogs": [
                 [
-                    "A kogo my tu mamy",
+                    "GIN!!!",
                     "`XrFightPipe"
                 ]
             ],
-            "sprite": "spr_sluzek_overworld",
+            "sprite": "spr_rura_overworld",
             "sprite_scale": 0.1,
             "goto_x": 0,
             "goto_y": 0
         },
         {
-            "name": "Blob end fight",
+            "name": "ruuuura",
             "dialogs": [
                 [
-                    "Przygotuj się!",
-                    "Zaraz cię zblobuję!!",
+                    "hej!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "smiec",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightTrash"
+                ]
+            ],
+            "sprite": "spr_smiec3",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "SMIEC!!!",
+            "dialogs": [
+                [
+                    "hej!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "gangg",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightGang"
+                ]
+            ],
+            "sprite": "spr_rat_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "GANG!!!",
+            "dialogs": [
+                [
+                    "jo!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "test",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightTest"
+                ]
+            ],
+            "sprite": "spr_rat_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "GANG!!!",
+            "dialogs": [
+                [
+                    "jo!!",
                     "`FIGHT_NEXT_STAGE"
                 ]
             ],

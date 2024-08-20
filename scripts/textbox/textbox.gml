@@ -70,6 +70,10 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialo
 				if (instance_exists(oIntroText)) {
 					oIntroText.start_anim = true
 				}
+				
+				if (instance_exists(oIntroTextSmal)) {
+					oIntroTextSmal.start_anim = true
+				}
 				current_text = - 1	
 			}
 			else if (dialog_array[current_text + 1] == "`SAVE_POINT")

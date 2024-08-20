@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"test_1_enemy",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":18.0,
+  "name":"test_1_enemy",
+  "parent":{
+    "name":"test_fight",
+    "path":"folders/przeciwnicy/test_fight.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"test_1_enemy.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"droplets1_muted",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.0,
+  "name":"droplets1_muted",
+  "parent":{
+    "name":"loops",
+    "path":"folders/Sounds/loops.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"droplets1_muted.ogg",
+  "type":0,
+  "volume":1.0,
+}

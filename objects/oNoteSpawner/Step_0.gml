@@ -12,7 +12,11 @@ function note_to_height(note) {
 
 function note_to_type(note) {
 	switch(note.octave) {
-		case 3: return NoteType.RELOAD
+		case 3: {
+			if (note.note == "C#") return NoteType.BEAT_PULSE
+			else if (note.note == "D") return NoteType.BEAT_TACT
+			else if (note.note == "C") return NoteType.RELOAD
+		}
 		case 4: return NoteType.ENEMY
 		case 5: return NoteType.PLAYER
 	}
@@ -22,13 +26,57 @@ function note_to_type(note) {
 function play_note(note) {
 	show_debug_message(note)
 	var _h = note_to_height(note)
-	var _new_note = instance_create_layer(x + sprite_width, y + note_percs[_h] * sprite_height, "notes_and_player", oNote, {
-		note_type: note_to_type(note),
-		note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
-		note_index: _h,
-	})
-	
-	ds_queue_enqueue(note_indexes[_h], _new_note)
+	if (note_to_type(note) == NoteType.RELOAD) {
+		var _new_note = instance_create_layer(x + sprite_width, y + note_percs[0] * sprite_height, "notes_and_player", oNote, {
+			note_type: NoteType.SCALE_WHOLE_TONE,
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: 0,
+		})
+		ds_queue_enqueue(note_indexes[0], _new_note)
+		
+		_new_note = instance_create_layer(x + sprite_width, y + note_percs[1] * sprite_height, "notes_and_player", oNote, {
+			note_type: NoteType.SCALE_MAJOR,
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: 1,
+		})
+		ds_queue_enqueue(note_indexes[1], _new_note)
+		
+		_new_note = instance_create_layer(x + sprite_width, y + note_percs[2] * sprite_height, "notes_and_player", oNote, {
+			note_type: NoteType.SCALE_MINOR,
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: 2,
+		})
+		ds_queue_enqueue(note_indexes[2], _new_note)
+		
+		_new_note = instance_create_layer(x + sprite_width, y + note_percs[3] * sprite_height, "notes_and_player", oNote, {
+			note_type: NoteType.SCALE_CHROMATIC,
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: 3,
+		})
+		ds_queue_enqueue(note_indexes[3], _new_note)
+		
+		instance_create_layer(x + sprite_width, y + note_percs[4] * sprite_height, "notes_and_player", oNote, {
+			note_type: NoteType.SCALE_PENTATONIC,
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: 4,
+		})
+		ds_queue_enqueue(note_indexes[4], _new_note)
+		
+	} else if (note_to_type(note) == NoteType.BEAT_TACT) {
+		var _new_note = instance_create_layer(x + sprite_width, y + note_percs[_h] * sprite_height, "note_spawner", oNote, {
+			note_type: note_to_type(note),
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: _h,
+		})
+		ds_queue_enqueue(note_indexes[_h], _new_note)
+	} else {
+		var _new_note = instance_create_layer(x + sprite_width, y + note_percs[_h] * sprite_height, "notes_and_player", oNote, {
+			note_type: note_to_type(note),
+			note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+			note_index: _h,
+		})
+		ds_queue_enqueue(note_indexes[_h], _new_note)
+	}
 }
 
 if not fight_has_started {
@@ -82,8 +130,8 @@ var _curr_idx = oFightingPlayer.position_index
 var _new_idx = -1
 
 for (var i = 0; i < 5; i += 1) {
-	if note_index_pressed(i) {
-		oFightingPlayer.goto_y = note_percs[i] * sprite_height - 25
+	if  note_index_positions[i] {//note_index_pressed(i) {
+		oFightingPlayer.goto_y = note_percs[i] * sprite_height + 75
 		oFightingPlayer.position_index = i
 		_new_idx = i
 	}

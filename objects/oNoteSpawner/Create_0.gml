@@ -37,7 +37,7 @@ for (var i = 1; i < _ds_h; i += 1) {
 
 last_played_idx = 0
 
-player_pos_perc = 0.1984
+player_pos_perc = 0.1625
 player_pos = player_pos_perc * sprite_width
 
 var TRACK_W = (1 - player_pos_perc) * sprite_width
@@ -76,3 +76,6 @@ gui_win_loose_y = 64
 
 hero_audio = 0
 sync_group = audio_create_sync_group(false)
+
+note_index_positions = [false, false, false, false, false]
+x_timing_offset = -6

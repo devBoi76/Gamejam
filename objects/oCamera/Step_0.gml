@@ -128,7 +128,7 @@ if (_clamp_left and _clamp_right) {
 }
 
 if (_clamp_up and _clamp_down) {
-	_clamped_tx = move_target_py - _viewH/2
+	_clamped_ty = move_target_py - _viewH/2
 }
 
 
