@@ -123,9 +123,10 @@ switch (note_type) {
 	break
 }
 
-if (place_meeting(x, y, oNoteDestroyer) or did_thing or (x < oNoteSpawner.player_pos_perc * oNoteSpawner.sprite_width - FORGIVING_DST_PX * 2))
+if (place_meeting(x, y, oNoteDestroyer) or did_thing)// or (x < oNoteSpawner.player_pos_perc * oNoteSpawner.sprite_width - FORGIVING_DST_PX * 2))
 	and is_first_enabled {
 	ds_queue_dequeue(oNoteSpawner.note_indexes[note_index])
+	instance_destroy(id)
 }
 
 if (place_meeting(x, y, oNoteDisabler)) {
