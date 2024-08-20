@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_sewers_boss_hero",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":85.09093,
+  "name":"mus_sewers_boss_hero",
+  "parent":{
+    "name":"gang",
+    "path":"folders/przeciwnicy/gang.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_sewers_boss_hero.ogg",
+  "type":0,
+  "volume":1.0,
+}

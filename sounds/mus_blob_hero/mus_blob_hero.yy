@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_blob_hero",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":22.2,
+  "name":"mus_blob_hero",
+  "parent":{
+    "name":"blob",
+    "path":"folders/przeciwnicy/blob.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_blob_hero.ogg",
+  "type":0,
+  "volume":1.0,
+}

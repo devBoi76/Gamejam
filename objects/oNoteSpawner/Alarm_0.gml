@@ -1,2 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Trigger npc
+obj_NPC.start_force_talking = true

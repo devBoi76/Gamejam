@@ -6,6 +6,7 @@ var _viewY = camera_get_view_y(view_camera[0]);
 var _viewW = camera_get_view_width(view_camera[0]);
 var _viewH = camera_get_view_height(view_camera[0]);
 
+var _current_zoom = _viewW/default_viewport_w
 
 var _to_rm_from_queue = []
 
@@ -17,6 +18,19 @@ for (var i = 0; i < array_length(transition_queue); i += 1) {
 		}
 	}
 	if not _found_type {
+		switch(transition_queue[i].type) {
+			case TransitionType.ZOOM:
+				transition_queue[i].from = _current_zoom
+				break
+			case TransitionType.POSX:
+				transition_queue[i].from = _viewX
+				break
+			case TransitionType.POSY:
+				transition_queue[i].from = _viewY
+				break
+			case TransitionType.POS_LOCK:
+				break
+		}
 		array_push(running_transitions, transition_queue[i])
 		show_debug_message("unqueue " + string(transition_queue[i]))
 		array_push(_to_rm_from_queue, i)
@@ -85,8 +99,39 @@ for (var i = 0; i < array_length(_to_rm_from_running); i += 1) {
 
 
 // clamp and offset camera
+var _new_cam_target_x = move_target_px - _viewW/2
+var _new_cam_target_y = move_target_py - _viewH/2
+
+var _clamp_left = false
+var _clamp_right = false
+var _clamp_up = false
+var _clamp_down = false
+
+if (_new_cam_target_x < 0 + margin_left_px) {
+	_clamp_right = true	
+}
+if (_new_cam_target_x > room_width - _viewW - margin_right_px) {
+	_clamp_left = true	
+}
+if (_new_cam_target_y < 0 + margin_top_px) {
+	_clamp_up = true	
+}
+if (_new_cam_target_y > room_height - _viewH - margin_bottom_px) {
+	_clamp_down = true	
+}
+
 var _clamped_tx = clamp(move_target_px - _viewW/2, 0, room_width - _viewW)
 var _clamped_ty = clamp(move_target_py - _viewH/2, 0, room_height - _viewH)
+
+if (_clamp_left and _clamp_right) {
+	_clamped_tx = move_target_px - _viewW/2
+}
+
+if (_clamp_up and _clamp_down) {
+	_clamped_ty = move_target_py - _viewH/2
+}
+
+
 
 if not move_target_locked {
 	camera_set_view_pos(view_camera[0],

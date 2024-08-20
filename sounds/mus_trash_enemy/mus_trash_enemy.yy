@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_trash_enemy",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":24.0,
+  "name":"mus_trash_enemy",
+  "parent":{
+    "name":"trash",
+    "path":"folders/przeciwnicy/trash.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_trash_enemy.ogg",
+  "type":0,
+  "volume":1.0,
+}

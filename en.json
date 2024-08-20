@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+{
+    "lang": "English",
+    "buttons": {
+        "settings": "Settings",
+        "exit_game": "Exit"
+    },
+    "npc": [
+        {
+            "name": "Kajak Krzysztof",
+            "dialogs": [
+                "Nie wiem, ale sie, wypowiem",
+                "Nie wiem, ale sie domyslam",
+                "Nie wiem"
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "Grzegorz Brzeczyszczykiewicz",
+            "dialogs:": [
+                "Lubie pizze",
+                "Lubie rosol"
+            ],
+            "sprite": "spr_npc_test"
+        }
+    ]
+=======
 {	"lang": "English",
 	"buttons": {
 		"settings": "Settings",
@@ -14,4 +41,5 @@
 			"item3": "opis przedmiotu trzeciego"
 		}
 	]
+>>>>>>> eae93097b33ffd6b9a8ad5e5a746aada47036239
 }

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _collides = place_meeting(x, y, oTestowaPostac)
+var _collides = place_meeting(x, y, obj_player_test)
 
 var _t = get_timer()
 
@@ -22,8 +22,6 @@ if (_t >= trigger_time) {
 	var _camH = camera_get_view_height(view_camera[0])
 	
 	
-	var _dt_zoom = _camW / room_width
-	
 	var _camX = camera_get_view_x(view_camera[0])// - (_camW / cam_set_zoom)
 	var _camY = camera_get_view_y(view_camera[0])// - (_camH / cam_set_zoom)
 
@@ -40,7 +38,7 @@ if (_t >= trigger_time) {
 	if not is_nan(cam_lock_px) {
 		array_push(oCamera.transition_queue, new Transition(
 		(_camX),
-		cam_lock_px,
+		cam_lock_px  - (_camW / 2),
 		duration,
 		TransitionType.POSX,
 		function_type))
@@ -50,7 +48,7 @@ if (_t >= trigger_time) {
 	if not is_nan(cam_lock_py) {
 		array_push(oCamera.transition_queue, new Transition(
 		(_camY),
-		cam_lock_py,
+		cam_lock_py  - (_camH / 2),
 		duration,
 		TransitionType.POSY,
 		function_type))

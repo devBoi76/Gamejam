@@ -10,6 +10,7 @@ function try_move_y(_y_speed , _player_width , _player_height )
 	if( tile_get_empty(_tile_left) && tile_get_empty(_tile_right))
 	{
 		other.failing = true;
+		other.coyote_jump = clamp(other.coyote_jump - 1 , 0 , other.coyote_jump_length);
 		return( _y_speed );
 	}
 	else
@@ -26,6 +27,8 @@ function try_move_y(_y_speed , _player_width , _player_height )
 			{
 				
 				other.failing = !(bool ( _sign + 0.5 ));
+				if(!other.failing){other.coyote_jump = other.coyote_jump_length;}
+				else{other.coyote_jump = clamp(other.coyote_jump - 1 , 0 , other.coyote_jump_length);}
 				
 				return( i - _sign );
 			}

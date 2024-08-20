@@ -1,17 +1,181 @@
-{	"lang": "English",
-	"buttons": {
-		"settings": "Settings",
-		"exit_game": "Exit"
-	},
-	"inventory": [ 
-		{
-			"item1": "Przedmiot1",
-			"item2": "Przedmiot2",
-			"item3": "Przedmiot3"
-		},{
-			"item1": "opis przedmiotu pierwszego",
-			"item2": "opis przedmiotu drugiego",
-			"item3": "opis przedmiotu trzeciego"
-		}
-	]
+{
+    "lang": "English",
+    "buttons": {
+        "settings": "Settings",
+        "exit_game": "Exit"
+    },
+    "inventory": [
+        {
+            "item1": "Przedmiot1",
+            "item2": "Przedmiot2",
+            "item3": "Przedmiot3"
+        },
+        {
+            "item1": "opis przedmiotu pierwszego",
+            "item2": "opis przedmiotu drugiego",
+            "item3": "opis przedmiotu trzeciego"
+        }
+    ],
+    "npc": [
+        {
+            "name": "Kajak Krzysztof",
+            "dialogs": [
+                [
+                    "Jezdem Enpedzem!",
+                    "Nie wiem, ale sie domyslam",
+                    "xd Nie wiem",
+"`SAVE_POINT"
+                ],
+                [
+                    "juz cie nie lubie",
+                    "aaa, z reszta, i tak cie nie lubialem"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "Grzegorz Brzeczyszczykiewicz",
+            "dialogs": [
+                [
+                    "Lubie pizze",
+                    "Lubie rosol",
+                    "nie lubie cie, a tak w ogole to czy wiedziales ze dinozaury zyly 66 minionow lat temu a nie tak jak mawiaja w telewizorni ze 65 milionow lat temu, i nie mam bladego pojecia dlaczego tak mowia.",
+                    "`CS6wysylam cie do pokoju startowego",
+                    "`Xroom_start"
+                ],
+                [
+                    "zmienilem swoj umysl",
+                    "juz cie lubie"
+                ]
+            ],
+            "sprite": "spr_npc_test",
+            "goto_x": 330,
+            "goto_y": 450
+        },
+        {
+            "name": "Blob end fight",
+            "dialogs": [
+                [
+                    "Przygotuj się!",
+                    "Zaraz cię zblobuję!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "Blob",
+            "dialogs": [
+                [
+                    "A kogo my tu mamy",
+                    "`XrFightBlob"
+                ]
+            ],
+            "sprite": "spr_sluzek_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "Rur",
+            "dialogs": [
+                [
+                    "GIN!!!",
+                    "`XrFightPipe"
+                ]
+            ],
+            "sprite": "spr_rura_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "ruuuura",
+            "dialogs": [
+                [
+                    "hej!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "smiec",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightTrash"
+                ]
+            ],
+            "sprite": "spr_smiec3",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "SMIEC!!!",
+            "dialogs": [
+                [
+                    "hej!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "gangg",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightGang"
+                ]
+            ],
+            "sprite": "spr_rat_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "GANG!!!",
+            "dialogs": [
+                [
+                    "jo!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "test",
+            "dialogs": [
+                [
+                    "xd!!!",
+                    "`XrFightTest"
+                ]
+            ],
+            "sprite": "spr_rat_overworld",
+            "sprite_scale": 0.1,
+            "goto_x": 0,
+            "goto_y": 0
+        },
+        {
+            "name": "GANG!!!",
+            "dialogs": [
+                [
+                    "jo!!",
+                    "`FIGHT_NEXT_STAGE"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        },
+        {
+            "name": "skrzynia",
+            "dialogs": [
+                [
+                    "Znalazles klucz!"
+                ]
+            ],
+            "sprite": "spr_npc_test"
+        }
+    ]
 }
