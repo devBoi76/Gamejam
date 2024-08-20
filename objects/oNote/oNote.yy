@@ -30,13 +30,13 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"","%Name":"note_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v1","%Name":"note_type","filters":[],"listItems":[
         "NoteType.RELOAD",
         "NoteType.ENEMY",
         "NoteType.PLAYER",
-      ],"multiselect":false,"name":"note_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"","%Name":"note_speed_px_per_sec","filters":[],"listItems":[],"multiselect":false,"name":"note_speed_px_per_sec","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"","%Name":"note_index","filters":[],"listItems":[],"multiselect":false,"name":"note_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+      ],"multiselect":false,"name":"note_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"note_speed_px_per_sec","filters":[],"listItems":[],"multiselect":false,"name":"note_speed_px_per_sec","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"note_index","filters":[],"listItems":[],"multiselect":false,"name":"note_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

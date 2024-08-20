@@ -60,7 +60,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"GMTK Gamejam 2024",
   "resources":[
@@ -198,12 +198,12 @@
     {"id":{"name":"drain","path":"sprites/drain/drain.yy",},},
     {"id":{"name":"foreground","path":"sprites/foreground/foreground.yy",},},
     {"id":{"name":"foreground94","path":"sprites/foreground94/foreground94.yy",},},
+    {"id":{"name":"gameover_screen","path":"sprites/gameover_screen/gameover_screen.yy",},},
     {"id":{"name":"gradient1","path":"sprites/gradient1/gradient1.yy",},},
     {"id":{"name":"gradient2","path":"sprites/gradient2/gradient2.yy",},},
     {"id":{"name":"gradient3","path":"sprites/gradient3/gradient3.yy",},},
     {"id":{"name":"gradient4","path":"sprites/gradient4/gradient4.yy",},},
     {"id":{"name":"gradient5","path":"sprites/gradient5/gradient5.yy",},},
-    {"id":{"name":"gameover_screen","path":"sprites/gameover_screen/gameover_screen.yy",},},
     {"id":{"name":"impact_1","path":"sprites/impact_1/impact_1.yy",},},
     {"id":{"name":"impact_2","path":"sprites/impact_2/impact_2.yy",},},
     {"id":{"name":"inventory_UI","path":"sprites/inventory_UI/inventory_UI.yy",},},
