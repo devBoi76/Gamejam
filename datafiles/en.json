@@ -23,7 +23,8 @@
                 [
                     "Jezdem Enpedzem!",
                     "Nie wiem, ale sie domyslam",
-                    "xd Nie wiem"
+                    "xd Nie wiem",
+"`SAVE_POINT"
                 ],
                 [
                     "juz cie nie lubie",
@@ -39,7 +40,7 @@
                     "Lubie pizze",
                     "Lubie rosol",
                     "nie lubie cie, a tak w ogole to czy wiedziales ze dinozaury zyly 66 minionow lat temu a nie tak jak mawiaja w telewizorni ze 65 milionow lat temu, i nie mam bladego pojecia dlaczego tak mowia.",
-                    "`CS6wysyłam cie do pokoju startowego",
+                    "`CS6wysylam cie do pokoju startowego",
                     "`Xroom_start"
                 ],
                 [
@@ -99,44 +100,14 @@
             ],
             "sprite": "spr_npc_test"
         },
-    ],
-    "teleports": [
         {
-            "room": "room_second",
-            "x": 570,
-            "y": 450,
-            "speed": 0
-        },
-        {
-            "room": "room_third",
-            "x": 0,
-            "y": 450,
-            "speed": 0
-        },
-        {
-            "room": "room_start",
-            "x": 0,
-            "y": 240,
-            "speed": 0
-        },
-        {
-            "room": "room_start",
-            "x": 570,
-            "y": 300,
-            "speed": 0
-        },
-        {
-            "room": "room_fourth",
-            "x": 285,
-            "y": 480,
-            "speed": -20
-        },
-        {
-            "room": "room_third",
-            "x": 75,
-            "y": 0,
-            "speed": 20
+            "name": "skrzynia",
+            "dialogs": [
+                [
+                    "Znalazles klucz!"
+                ]
+            ],
+            "sprite": "spr_npc_test"
         }
     ]
-}
 }

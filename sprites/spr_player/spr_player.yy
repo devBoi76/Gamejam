@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_player",
-  "bboxMode":0,
-  "bbox_bottom":119,
-  "bbox_left":0,
-  "bbox_right":29,
-  "bbox_top":0,
+  "bboxMode":2,
+  "bbox_bottom":89,
+  "bbox_left":15,
+  "bbox_right":45,
+  "bbox_top":-31,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -14,9 +14,9 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"6b20a518-30e1-4076-a5c4-ec65d9952997","name":"6b20a518-30e1-4076-a5c4-ec65d9952997","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":120,
+  "gridX":15,
+  "gridY":15,
+  "height":90,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"9596b808-4a34-4359-8978-76fddde616c7","blendMode":0,"displayName":"default","isLocked":false,"name":"9596b808-4a34-4359-8978-76fddde616c7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":30,
+  "width":60,
 }

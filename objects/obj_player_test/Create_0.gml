@@ -8,8 +8,8 @@ current_slippery = slippery;
 air_slippery = 0.1; // The larger it is the more slippery air is. Shall not be larger than 1.
 max_x_speed = 15;
 
-hitbox_height = 120;
-hitbox_width = 30;
+hitbox_height = global.universal_constant * 4;
+hitbox_width = global.universal_constant;
 
 x = clamp(global.target.x , 1 , room_width - hitbox_width -1 );
 y = clamp(global.target.y , 1 , room_height - hitbox_height -1 );

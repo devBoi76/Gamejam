@@ -100,6 +100,21 @@ save_constructor = function() constructor
 	ini_close();
 	}
 	
+	static reset = function()
+	{
+		save_room = "room_start";
+		save_x = 100;
+		save_y = 100;
+		respawn_room = "room_start";
+		respawn_x = 100;
+		respawn_y = 100;
+		inventory = -1; inventory = array_create(array_length(global.lang.inventory) , 0);
+		enemies = -1; enemies = array_create(10 , 0);
+		chests = -1; chests = array_create(10 , 0);
+		enemies_highscores = -1; enemies_highscores = array_create(10 , 0);
+		levers = -1; levers = array_create(10 , 0 );
+	}
+	
 }
 
 global.universal_constant = sprite_get_height(spr_tileset);

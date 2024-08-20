@@ -33,6 +33,7 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialo
 			if(name != "") draw_sprite_ext(namebox_sprite , -1 , _x + ( (sprite_get_width(textbox_sprite) - sprite_get_width(textbox_sprite) * appear) / 2 ) , _y + ( (sprite_get_height(textbox_sprite) - sprite_get_height(textbox_sprite) * appear) / 2 )  - ( ( sprite_get_height(namebox_sprite) / 2 ) * appear) , appear , appear , 0 , c_white , appear );
 			if( ! (current_text == -1) && appear == 1)
 			{
+				draw_set_font(Font_dialogs);
 					write_text( _x + margin , _y , name , false , sprite_get_width(namebox_sprite) - margin * 2);
 					animation_progress = write_text( _x + margin, _y + ( sprite_get_height(namebox_sprite) / 2 ) + margin , dialog_array[current_text] , true , sprite_get_width(textbox_sprite) - 2 * margin , animation_progress ) ;
 			}
@@ -70,6 +71,11 @@ function textbox_create(_npc_id , _player_id , my_x , my_y , _margin = 0 , dialo
 					oIntroText.start_anim = true
 				}
 				current_text = - 1	
+			}
+			else if (dialog_array[current_text + 1] == "`SAVE_POINT")
+			{
+				global.save.write("save");
+				current_text = - 1	;
 			}
 			else
 			{

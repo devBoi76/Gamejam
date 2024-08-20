@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_door",
   "bboxMode":0,
-  "bbox_bottom":149,
+  "bbox_bottom":304,
   "bbox_left":0,
-  "bbox_right":29,
+  "bbox_right":101,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":30,
   "gridY":15,
-  "height":150,
+  "height":305,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"5635f43f-f88d-40b8-bb8d-f9c1fe5efc8b","blendMode":0,"displayName":"default","isLocked":false,"name":"5635f43f-f88d-40b8-bb8d-f9c1fe5efc8b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":30,
+  "width":102,
 }

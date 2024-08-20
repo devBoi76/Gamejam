@@ -7,6 +7,9 @@ if struct_exists(global.lang.npc[index], "sprite_scale") {
 	image_yscale = global.lang.npc[index].sprite_scale
 }
 
+
+
+started_dialog = false
 attention_distance = 50;
 stretch = 0;
 random_i = 0;
