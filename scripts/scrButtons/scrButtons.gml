@@ -1,7 +1,7 @@
 function button_group() constructor{
 	elements = [];
 	is_clickable = true;
-	clicked_element = -1;
+	hover_element = [-1,-1];
 	bx = 0;
 	by = 0;
 	
@@ -36,30 +36,32 @@ function button_group() constructor{
 		for (var i = 0; i < _length; i += 1){
 			switch elements[i][3] {
 				case "basic" :
-					if elements[i][4] {
-						draw_set_color(c_lime);
-						draw_rectangle(bx+elements[i][0]-80,by+elements[i][1]-30,bx+elements[i][0]+80,by+elements[i][1]+30,true);
-						draw_set_color(c_white);
-						draw_text(bx+elements[i][0]-20, elements[i][1]-10,global.lang.buttons[$ elements[i][2]]);
+					draw_set_font(fUI_font);
+					draw_set_halign(fa_center);
+					draw_set_valign(fa_middle);
+					draw_set_color(c_white);
+					draw_text(bx+elements[i][0],by+elements[i][1],global.lang.buttons[$ elements[i][2]]);
+					if hover_element[0] == i {
+						if elements[i][4] {
+							draw_sprite(przycisk_UI0002,-1,bx+elements[i][0],by+elements[i][1]);
+						} else {
+							draw_sprite(przycisk_UI0001,-1,bx+elements[i][0],by+elements[i][1]);
+						}
 					} else {
-						draw_set_color(c_red);
-						draw_rectangle(bx+elements[i][0]-80, by+elements[i][1]-30,bx+elements[i][0]+80, by+elements[i][1]+30,true);
-						draw_set_color(c_white);
-						draw_text(bx+elements[i][0]-20, by+elements[i][1]-10,global.lang.buttons[$ elements[i][2]]);
+						draw_sprite(przycisk_UI0000,-1,bx+elements[i][0],by+elements[i][1]);
 					}
 				break;
 				
 				case "switch" :
+					draw_set_font(fUI_font);
+					draw_set_halign(fa_center);
+					draw_set_valign(fa_middle);
+					draw_set_color(c_white);
+					draw_text(bx+elements[i][0],by+elements[i][1],global.lang.buttons[$ elements[i][2]]);
 					if elements[i][4] {
-						draw_set_color(c_lime);
-						draw_rectangle(elements[i][0]-80, elements[i][1]-30,elements[i][0]+80, elements[i][1]+30,false);
-						draw_set_color(c_black);
-						draw_text(elements[i][0]-20, elements[i][1]-10,"SWITCH: ON");
+						draw_sprite(off_UI0000,-1,bx+elements[i][0],by+elements[i][1]);
 					} else {
-						draw_set_color(c_red);
-						draw_rectangle(elements[i][0]-80, elements[i][1]-30,elements[i][0]+80, elements[i][1]+30,false);
-						draw_set_color(c_black);
-						draw_text(elements[i][0]-20, elements[i][1]-10,"SWITCH: OFF");
+						draw_sprite(off_UI0001,-1,bx+elements[i][0],by+elements[i][1]);
 					}
 				break;
 				
@@ -87,16 +89,26 @@ function button_group() constructor{
 		for (var i = 0; i < _length; i += 1){
 			switch elements[i][3] {
 				case "basic" :
-					if mouse_check_button_pressed(mb_left ) && point_in_rectangle(mouse_x,mouse_y,bx+elements[i][0]-80, by+elements[i][1]-30,bx+elements[i][0]+80, by+elements[i][1]+30) {
-						elements[i][4] = true;
-					} else {
-						elements[i][4] = false;
+					if point_in_rectangle(mouse_x,mouse_y,bx+elements[i][0]-215, by+elements[i][1]-50,bx+elements[i][0]+215, by+elements[i][1]+50) {
+						hover_element[0] = i;
+						if mouse_check_button_pressed(mb_left){
+							elements[i][4] = true;
+						} else {
+							elements[i][4] = false;
+						}
+					} else if hover_element[0] == i {
+						hover_element = [-1,-1];
 					}
 				break;
 				
 				case "switch" :
-					if mouse_check_button_pressed(mb_left ) && point_in_rectangle(mouse_x,mouse_y,elements[i][0]-80, elements[i][1]-30,elements[i][0]+80, elements[i][1]+30) {
-						elements[i][4] = !elements[i][4];
+					if point_in_rectangle(mouse_x,mouse_y,bx+elements[i][0]-215, by+elements[i][1]-50,bx+elements[i][0]+215, by+elements[i][1]+50) {
+					hover_element[0] = i;
+						if mouse_check_button_pressed(mb_left){
+							elements[i][4] = !elements[i][4];
+						}
+					} else if hover_element[0] == i {
+						hover_element = [-1,-1];
 					}
 				break;
 				

@@ -5,13 +5,13 @@ kolor = $DEC6FF;
 dialog1 = 1;
 
 
-//przyciski = new button_group();
+przyciski = new button_group();
 
 
-//przyciski.add_element(100,200,"nazwa1","slider",30);
+przyciski.add_element(400,300,"nazwa1","slider",30);
 
-//przyciski.add_element(100,100,"nazwa2","basic",false);
+przyciski.add_element(400,100,"nazwa2","basic",false);
 
-//przyciski.add_element(100,300,"nazwa3","switch",true);
+przyciski.add_element(400,500,"nazwa3","switch",true);
 
-//przyciski.add_element(100,400,"nazwa4","list",[0,["Ziemniaki","Jabłka","Cebule","Czereśnie"]]);
+przyciski.add_element(400,700,"nazwa4","list",[0,["Ziemniaki","Jabłka","Cebule","Czereśnie"]]);
