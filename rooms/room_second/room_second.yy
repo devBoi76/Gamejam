@@ -18,10 +18,17 @@
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRTileLayer":"","%Name":"Tiles_Hitbox","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Hitbox","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":6,"SerialiseWidth":30,"TileCompressedData":[
-          -20,1,-10,-2147483648,-5,1,-9,-2147483648,-6,0,-10,-2147483648,-4,1,-12,-2147483648,-4,0,-10,-2147483648,
-          -3,1,-14,-2147483648,-3,0,-10,-2147483648,-2,1,-16,-2147483648,-2,0,-10,-2147483648,1,1,-18,-2147483648,
-          1,0,-10,-2147483648,
+    {"$GMRTileLayer":"","%Name":"Tiles_Hitbox","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Hitbox","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":20,"SerialiseWidth":100,"TileCompressedData":[
+          -20,1,-80,-2147483648,-5,1,-9,-2147483648,-6,0,-78,-2147483648,-6,1,-12,-2147483648,-4,0,-78,-2147483648,
+          2,1,-2147483648,-3,1,-14,-2147483648,-3,0,-78,-2147483648,4,1,-2147483648,1,1,-16,-2147483648,-2,0,-78,
+          -2147483648,3,1,-2147483648,1,-18,-2147483648,1,0,-78,-2147483648,3,1,-2147483648,1,-18,-2147483648,
+          1,0,-78,-2147483648,4,1,-2147483648,1,0,-17,-2147483648,-2,1,-29,0,-48,-2147483648,4,1,-2147483648,1,
+          0,-6,-2147483648,-7,1,-4,-2147483648,1,1,-14,-2147483648,-9,0,-55,-2147483648,-3,1,-7,-2147483648,-7,
+          1,-4,-2147483648,1,1,-79,-2147483648,-2,1,-7,-2147483648,1,1,-10,-2147483648,1,1,-79,-2147483648,-2,
+          1,-7,-2147483648,1,1,-10,-2147483648,1,1,-79,-2147483648,-5,1,-3,-2147483648,-2,1,-10,-2147483648,1,
+          1,-79,-2147483648,-5,1,-15,-2147483648,-2,1,-78,-2147483648,-5,1,-16,-2147483648,1,1,-78,-2147483648,
+          -5,1,-16,-2147483648,1,1,-78,-2147483648,-6,1,-15,-2147483648,1,1,-78,-2147483648,-6,1,-15,-2147483648,
+          2,1,0,-77,-2147483648,-6,1,-15,-2147483648,2,1,0,-22,-2147483648,-7,0,-48,-2147483648,-101,1,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_tileset_hitbox","path":"tilesets/ts_tileset_hitbox/ts_tileset_hitbox.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":15,"gridY":30,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_C12015E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C12015E","objectId":{"name":"obj_player_test","path":"objects/obj_player_test/obj_player_test.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":750.0,"y":540.0,},

@@ -69,6 +69,22 @@ function play_note(note) {
 			note_index: _h,
 		})
 		ds_queue_enqueue(note_indexes[_h], _new_note)
+	} else if (note_to_type(note) == NoteType.ENEMY) {
+		var _send = true
+		if (easier_mode) {
+			_easier_stepper = (_easier_stepper + 1)	% _easier_every_nth
+			if (_easier_stepper == 0) {
+				_send = false
+			}
+		}
+		if (_send) {
+			var _new_note = instance_create_layer(x + sprite_width, y + note_percs[_h] * sprite_height, "notes_and_player", oNote, {
+				note_type: note_to_type(note),
+				note_speed_px_per_sec: NOTE_SPEED_PX_PER_SEC,
+				note_index: _h,
+			})
+			ds_queue_enqueue(note_indexes[_h], _new_note)
+		}
 	} else {
 		var _new_note = instance_create_layer(x + sprite_width, y + note_percs[_h] * sprite_height, "notes_and_player", oNote, {
 			note_type: note_to_type(note),
@@ -116,7 +132,7 @@ if (_t > end_time and not enemy_obj.fight_over) {
 	}
 	oIntroText.start_anim = true
 	alarm[1] = 120
-}
+} 
 
 for (var i = last_played_idx; i < array_length(notes); i += 1) {
 	if (_t - start_time >= (notes[i].start_sec) * 1_000_000 * 60 / bpm) {
@@ -131,7 +147,7 @@ var _new_idx = -1
 
 for (var i = 0; i < 5; i += 1) {
 	if  note_index_positions[i] {//note_index_pressed(i) {
-		oFightingPlayer.goto_y = note_percs[i] * sprite_height + 75
+		oFightingPlayer.goto_y = note_percs[i] * sprite_height + 35
 		oFightingPlayer.position_index = i
 		_new_idx = i
 	}
@@ -151,7 +167,7 @@ oWaga.angle_deg = (player_confidence/100) * 45
 player_confidence = lerp(player_confidence, 0, 0.001)
 
 if (last_player_note_missed) {
-	audio_sound_gain(hero_audio, 0.1, 50)
+	audio_sound_gain(hero_audio, 0.1, 25)
 } else {
-	audio_sound_gain(hero_audio, 1, 50)
+	audio_sound_gain(hero_audio, 1, 25)
 }

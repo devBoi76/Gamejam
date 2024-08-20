@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":22.2,
+  "duration":25.2,
   "name":"mus_blob_hero",
   "parent":{
     "name":"blob",

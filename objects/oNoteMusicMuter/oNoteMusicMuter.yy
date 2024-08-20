@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sPostac4",
+    "path":"sprites/sPostac4/sPostac4.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

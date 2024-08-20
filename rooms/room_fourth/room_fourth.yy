@@ -20,7 +20,12 @@
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRTileLayer":"","%Name":"Tiles_Hitbox","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Hitbox","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":6,"SerialiseWidth":6,"TileCompressedData":[-10,1,-2,-2147483648,-3,1,-3,-2147483648,-2,1,-4,-2147483648,1,1,-5,-2147483648,1,1,-5,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"ts_tileset_hitbox","path":"tilesets/ts_tileset_hitbox/ts_tileset_hitbox.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRTileLayer":"","%Name":"Tiles_Hitbox","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Hitbox","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":20,"SerialiseWidth":20,"TileCompressedData":[
+          -24,1,-12,-2147483648,-7,1,-14,-2147483648,-5,1,-16,-2147483648,-3,1,-18,-2147483648,-2,1,-18,-2147483648,
+          -2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,
+          -2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,-2,1,-18,-2147483648,
+          -9,1,-4,-2147483648,-16,1,-4,-2147483648,-16,1,-4,-2147483648,-16,1,-4,-2147483648,-8,1,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_tileset_hitbox","path":"tilesets/ts_tileset_hitbox/ts_tileset_hitbox.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":30,"gridY":30,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_3AA0BB0E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3AA0BB0E","objectId":{"name":"obj_room_mark","path":"objects/obj_room_mark/obj_room_mark.yy",},"properties":[
             {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_room_mark","path":"objects/obj_room_mark/obj_room_mark.yy",},"propertyId":{"name":"index","path":"objects/obj_room_mark/obj_room_mark.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},

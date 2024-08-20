@@ -16,8 +16,9 @@ function rotate_around_point(p1x, p1y, p2x, p2y, rad) {
 
 var SCALE = 0.25
 
-
-var a = angle_deg
+_curr_angle = lerp(_curr_angle, angle_deg, 0.35)
+angle_off = lerp(angle_off, 0, 0.35)
+var a = _curr_angle
 //var a = sin((get_timer() / 1000000) % (2 * pi)) * 30
 
 var _center_width = sprite_get_width(waga_center) * SCALE
@@ -38,7 +39,7 @@ draw_sprite_ext(waga_center2, 0,
 	new_corner[0], new_corner[1],
 	SCALE, SCALE, a, c_white, 1)
 
-draw_sprite_ext(waga_center, 0, x + 160 * SCALE, y - 60 * SCALE, SCALE, SCALE, 0, c_white, 1)
+draw_sprite_ext(waga_center, 0, x + 240 * SCALE, y - 60 * SCALE, SCALE, SCALE, 0, c_white, 1)
 
 var _trans_x = 76 * SCALE
 var _trans_y = 14 * SCALE

@@ -3,6 +3,14 @@
 draw_sprite_ext(sprite_index, 0, x, y,
 	image_xscale, image_yscale, image_angle, c_white, image_alpha)
 
+if (impact_frame_visible) {
+	if (_impact_unfade) {
+		_impact_alpha = lerp(_impact_alpha, 0, 0.35)
+	}
+	draw_sprite_ext(_impact_sprite, 0, x, y,
+		image_xscale * _impact_scale, image_yscale * _impact_scale, _impact_rotation, c_white, _impact_alpha)
+}
+
 //draw_set_color(c_lime)
 //draw_circle(x, y, 10, false)
 //draw_self()

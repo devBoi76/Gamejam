@@ -71,6 +71,10 @@ if (prefight_chat) {
 	alarm[0] = 20	
 }
 
+easier_mode = false
+_easier_every_nth = 3
+_easier_stepper = 0
+
 gui_win_loose_x = 640
 gui_win_loose_y = 64
 

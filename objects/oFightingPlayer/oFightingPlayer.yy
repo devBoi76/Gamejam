@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_postac_walka_stoi",
-    "path":"sprites/spr_postac_walka_stoi/spr_postac_walka_stoi.yy",
+    "name":"spr_postac_walka_start",
+    "path":"sprites/spr_postac_walka_start/spr_postac_walka_start.yy",
   },
   "spriteMaskId":{
     "name":"postac_hitbox",

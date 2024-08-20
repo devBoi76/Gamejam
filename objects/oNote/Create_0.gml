@@ -14,6 +14,13 @@ POINTS_EN_MISS_NOHIT = 0.2
 
 _disable_player_action = false
 
+impact_frame_visible = false
+_impact_sprite = choose(impact_1, impact_2)
+_impact_rotation = random_range(-30, 30)
+_impact_scale = random_range(0.7, 1.1)
+_impact_alpha = 1
+_impact_unfade = false
+
 
 switch (note_type) {
 	case NoteType.PLAYER: sprite_index = note1; x += oNoteSpawner.x_timing_offset * 5
