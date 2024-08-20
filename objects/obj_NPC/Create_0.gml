@@ -10,7 +10,7 @@ if struct_exists(global.lang.npc[index], "sprite_scale") {
 
 
 started_dialog = false
-attention_distance = 50;
+attention_distance = 200;
 stretch = 0;
 random_i = 0;
 enemy_status_defeated = false;

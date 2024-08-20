@@ -11,9 +11,12 @@ max_x_speed = 50;
 hitbox_height = global.universal_constant * 5;
 hitbox_width = global.universal_constant;
 
-x = clamp(global.target.x , 1 , room_width - hitbox_width -1 );
-y = clamp(global.target.y , 1 , room_height - hitbox_height -1 );
-y_speed = clamp(global.target.y_speed , -30 , 20); 
+
+x = global.target.x ;
+y = global.target.y ;
+//x = clamp(global.target.x , 1 , room_width - hitbox_width -1 );
+//y = clamp(global.target.y , 1 , room_height - hitbox_height -1 );
+y_speed = global.target.y_speed; 
 
 old_x = x;
 old_y = y;

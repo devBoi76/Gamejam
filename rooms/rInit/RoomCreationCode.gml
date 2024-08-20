@@ -1,4 +1,4 @@
-room_goto(rSewers1);
+room_goto(rMenu);
 
 if file_exists("en.json") {
 
