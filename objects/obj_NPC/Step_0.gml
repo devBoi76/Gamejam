@@ -44,11 +44,6 @@ if(is_chest > -1 and my_textbox.is_over == true)
 
 
 
-
-
-
-
-
 if (start_force_talking) {
 	show_debug_message("START_FORCE_TALKING!!!")
 	my_textbox.next_dialog()
