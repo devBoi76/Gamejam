@@ -1,4 +1,4 @@
-//room_goto(rMenu);
+room_goto(rSewers1);
 
 if file_exists("en.json") {
 
@@ -136,6 +136,6 @@ global.target =
 
 global.npc_dialog_options = array_create(array_length(global.lang.npc) , 0 );
 
-room_goto(asset_get_index(global.save.save_room));
+//room_goto(asset_get_index(global.save.save_room));
 
 randomize();

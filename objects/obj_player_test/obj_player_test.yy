@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"MandelineIdle",
+    "path":"sprites/MandelineIdle/MandelineIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

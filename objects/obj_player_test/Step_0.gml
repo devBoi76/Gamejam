@@ -44,8 +44,8 @@ y = clamp( y + y_speed , 1 , room_height - hitbox_height -1 );
 var _hor = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _ver = keyboard_check(vk_down) - keyboard_check(vk_up);
 
-var _gotoX = x + sprite_width/2 + (_hor * 200);
-var _gotoY = y + sprite_height/2 + (_ver * 200);
+var _gotoX = x + (_hor * 500);
+var _gotoY = y + (_ver * 500);
 
 oCamera.move_target_px = _gotoX;
 oCamera.move_target_py = _gotoY;
@@ -54,7 +54,7 @@ oCamera.move_target_py = _gotoY;
 if(keyboard_check(vk_enter)){ x = old_x; y = old_y; }
 
 // aktualizuj pozycje dla listenera audio
-audio_listener_position(x-sprite_width/2, y, 0)
+audio_listener_position(x + hitbox_width/2, y, 0)
 audio_listener_orientation(0, 0, -1000, 0, 1, 0)
 //audio_listener_orientation(0, 0, 1, lengthdir_x(1, direction), lengthdir_y(1, direction), 0);
 

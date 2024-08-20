@@ -7,6 +7,7 @@ var _viewW = camera_get_view_width(view_camera[0]);
 var _viewH = camera_get_view_height(view_camera[0]);
 
 var _current_zoom = _viewW/default_viewport_w
+current_zoom = _current_zoom
 
 var _to_rm_from_queue = []
 
@@ -74,7 +75,11 @@ for (var i = 0; i < array_length(running_transitions); i += 1) {
 		break
 		
 		case TransitionType.POS_LOCK:
-			move_target_locked = true
+			if (running_transitions[i].duration == -1) {
+				move_target_locked = not move_target_locked	
+			} else {
+				move_target_locked = true
+			}
 			//alarm_set(0, real(running_transitions[i].get() * game_get_speed(gamespeed_fps)))
 		break
 		
@@ -84,7 +89,7 @@ for (var i = 0; i < array_length(running_transitions); i += 1) {
 
 	if (running_transitions[i].is_over()) {
 		show_debug_message("mark" + string(running_transitions[i]))
-		if (running_transitions[i].type == TransitionType.POS_LOCK) {
+		if (running_transitions[i].type == TransitionType.POS_LOCK and running_transitions[i].duration != -1) {
 			move_target_locked = false	
 		}
 		

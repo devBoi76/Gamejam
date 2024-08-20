@@ -5,7 +5,7 @@ function try_move_x( _x_speed , _player_width , _player_height )
 	var _sign = sign(_x_speed);
 	_player_width = ( (_player_width / 2) + _sign * (_player_width / 2) );
 	
-	tile = array_create( (hitbox_height / global.universal_constant) + 1);
+	tile = array_create( (hitbox_height / global.universal_constant));
 	
 	tiles_fill( tile , _x_speed , _player_width , _player_height );
 	
