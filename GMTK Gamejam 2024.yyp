@@ -94,6 +94,7 @@
     {"id":{"name":"oNote","path":"objects/oNote/oNote.yy",},},
     {"id":{"name":"oNoteDestroyer","path":"objects/oNoteDestroyer/oNoteDestroyer.yy",},},
     {"id":{"name":"oNoteDisabler","path":"objects/oNoteDisabler/oNoteDisabler.yy",},},
+    {"id":{"name":"oNoteMusicMuter","path":"objects/oNoteMusicMuter/oNoteMusicMuter.yy",},},
     {"id":{"name":"oNoteSpawner","path":"objects/oNoteSpawner/oNoteSpawner.yy",},},
     {"id":{"name":"oObiektTestowy","path":"objects/oObiektTestowy/oObiektTestowy.yy",},},
     {"id":{"name":"oOdbicie","path":"objects/oOdbicie/oOdbicie.yy",},},
